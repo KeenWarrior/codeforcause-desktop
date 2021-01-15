@@ -1,4 +1,4 @@
-# electron-react-redux-boilerplate
+# Code For Cause Desktop Application
 
 Code for cause crosss platform desktop application built with [Electron](http://electron.atom.io/), [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/).
 
