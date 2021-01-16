@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Auth from '../components/auth'
+import authService from '../services/authService'
 
 export default class Login extends Component {
   static propTypes = {
@@ -8,6 +10,7 @@ export default class Login extends Component {
 
   state = {
     username: '',
+    load: false
   };
 
   handleLogin = () => {
@@ -21,7 +24,7 @@ export default class Login extends Component {
     this.setState({
       username: e.target.value,
     });
-  };
+  };  
 
   render() {
     return (
@@ -29,6 +32,8 @@ export default class Login extends Component {
         <h2>Login</h2>
         <input onChange={this.handleChange} type="text" value={this.state.username} />
         <button onClick={this.handleLogin}>Log In</button>
+        {/* <Auth /> */}
+        <button onClick={()=> {authService.handleEmailAndPasswordLogin("abhimait1909@gmail.com", "ak@123456")}} >Google Auth</button>
       </div>
     );
   }

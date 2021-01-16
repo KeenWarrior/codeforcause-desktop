@@ -47,6 +47,8 @@ app.on('ready', async () => {
     show: false,
     webPreferences: {
       nodeIntegration: true,
+      nativeWindowOpen: true,
+      enableRemoteModule: true,
     },
   });
 

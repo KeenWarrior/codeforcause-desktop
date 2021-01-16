@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { createMemoryHistory } from 'history';
-import routes from './routes';
+import Routes from './routes';
 import configureStore from './store';
+import Auth from './auth'
 
 const syncHistoryWithStore = (store, history) => {
   const { router } = store.getState();
@@ -22,7 +23,11 @@ const rootElement = document.querySelector(document.currentScript.getAttribute('
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={routerHistory}>{routes}</ConnectedRouter>
+    <ConnectedRouter history={routerHistory}>
+      <Auth>
+        <Routes />
+      </Auth>
+    </ConnectedRouter>
   </Provider>,
   rootElement,
 );
