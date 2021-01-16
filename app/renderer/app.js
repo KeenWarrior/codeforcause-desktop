@@ -6,6 +6,8 @@ import { createMemoryHistory } from 'history';
 import Routes from './routes';
 import configureStore from './store';
 import Auth from './auth';
+import { ThemeProvider } from '@material-ui/core';
+import { createTheme } from './theme';
 
 const syncHistoryWithStore = (store, history) => {
   const { router } = store.getState();
@@ -24,9 +26,11 @@ const rootElement = document.querySelector(document.currentScript.getAttribute('
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={routerHistory}>
-      <Auth>
-        <Routes />
-      </Auth>
+      <ThemeProvider theme={createTheme()}>
+        <Auth>
+          <Routes />
+        </Auth>
+      </ThemeProvider>
     </ConnectedRouter>
   </Provider>,
   rootElement,

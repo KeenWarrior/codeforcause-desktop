@@ -20,9 +20,9 @@ const installExtensions = async () => {
 };
 
 crashReporter.start({
-  productName: 'YourName',
-  companyName: 'YourCompany',
-  submitURL: 'https://your-domain.com/url-to-submit',
+  productName: 'Code for cause Desktop',
+  companyName: 'Code for cause Org',
+  submitURL: 'https://github.com/codeforcauseorg/codeforcause-desktop',
   uploadToServer: false,
 });
 
@@ -47,8 +47,6 @@ app.on('ready', async () => {
     show: false,
     webPreferences: {
       nodeIntegration: true,
-      nativeWindowOpen: true,
-      enableRemoteModule: true,
     },
   });
 

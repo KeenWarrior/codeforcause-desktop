@@ -1,7 +1,7 @@
 import { Button, makeStyles, TextField } from '@material-ui/core';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { login } from '../actions/user';
+import { login, logout } from '../actions/user';
 import authService from '../services/authService';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 
@@ -34,13 +34,19 @@ export default function Login() {
   const handleChange = (e) => {
     setUserField({
       ...userField,
-      [e.target.name]: [e.target.value],
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleLogin = () => {
     dispatch(login());
-    authService.handleEmailAndPasswordLogin('abhimait1909@gmail.com', 'ak@123456');
+    console.log(userField.email);
+    authService.handleEmailAndPasswordLogin(userField.email, userField.password);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+    authService.logout();
   };
 
   return (
@@ -72,6 +78,7 @@ export default function Login() {
           Login
         </Button>
       </ValidatorForm>
+      <Button onClick={handleLogout}>Logout</Button>
     </div>
   );
 }

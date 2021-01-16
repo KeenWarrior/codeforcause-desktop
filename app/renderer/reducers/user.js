@@ -10,7 +10,7 @@ import {
 import produce from 'immer';
 
 const INITIAL_STATE = {
-  user: undefined,
+  firebaseUser: undefined,
   login: false,
 };
 
