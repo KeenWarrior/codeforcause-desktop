@@ -13,8 +13,8 @@ function Auth({ children }) {
         onLogout: () => dispatch(logout())
       });
 
-      await authService.handleAuthentication();
-      authService.firebase.auth().onAuthStateChanged(user => {
+      authService.handleAuthentication(); // initialize Firebase Authentication
+      authService.firebase.auth().onAuthStateChanged(user => { // Listen to auth change
         dispatch(setUserData(user));
         user.getIdToken().then(token => {
           authService.setSession(token);

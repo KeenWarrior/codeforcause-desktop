@@ -1,4 +1,3 @@
-import { createAction } from 'redux-actions';
 import authService from '../services/authService';
 
 export const LOGIN_REQUEST = '@account/login-request';
@@ -41,8 +40,3 @@ export function logout() {
   };
 }
 
-
-export default {
-  login: createAction('USER_LOGIN'),
-  logout: createAction('USER_LOGOUT'),
-};
