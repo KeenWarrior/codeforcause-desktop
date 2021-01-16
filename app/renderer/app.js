@@ -5,7 +5,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { createMemoryHistory } from 'history';
 import Routes from './routes';
 import configureStore from './store';
-import Auth from './auth'
+import Auth from './auth';
 
 const syncHistoryWithStore = (store, history) => {
   const { router } = store.getState();

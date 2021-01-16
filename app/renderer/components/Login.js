@@ -3,30 +3,27 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../actions/user';
 import authService from '../services/authService';
-import {
-  TextValidator,
-  ValidatorForm
-} from 'react-material-ui-form-validator';
+import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   btn: {
     backgroundColor: '#A60000',
     color: '#ffffff',
     textTransform: 'capitalize',
     [theme.breakpoints.down('sm')]: {
-      width: '100%'
+      width: '100%',
     },
     '&:hover': {
-      backgroundColor: 'rgba(166, 0, 0, 0.8)'
-    }
+      backgroundColor: 'rgba(166, 0, 0, 0.8)',
+    },
   },
   textField: {
-    marginBottom: '16px'
+    marginBottom: '16px',
   },
   submissions: {
     width: '80px',
-    height: '50px'
-  }
+    height: '50px',
+  },
 }));
 
 export default function Login() {
@@ -34,16 +31,16 @@ export default function Login() {
   const dispatch = useDispatch();
   const [userField, setUserField] = useState({});
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setUserField({
       ...userField,
-      [e.target.name]: [e.target.value]
-    })
-  }
+      [e.target.name]: [e.target.value],
+    });
+  };
 
   const handleLogin = () => {
-    dispatch(login())
-    authService.handleEmailAndPasswordLogin("abhimait1909@gmail.com", "ak@123456")
+    dispatch(login());
+    authService.handleEmailAndPasswordLogin('abhimait1909@gmail.com', 'ak@123456');
   };
 
   return (
@@ -57,7 +54,8 @@ export default function Login() {
           label="Email Address"
           name="email"
           value={userField.email}
-          onChange={handleChange} />
+          onChange={handleChange}
+        />
 
         <TextValidator
           className={classes.textField}
@@ -67,7 +65,8 @@ export default function Login() {
           name="password"
           type="password"
           value={userField.password}
-          onChange={handleChange} />
+          onChange={handleChange}
+        />
 
         <Button type="submit" className={classes.btn}>
           Login

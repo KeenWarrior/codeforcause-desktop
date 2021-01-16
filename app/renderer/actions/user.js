@@ -10,33 +10,32 @@ export const REGISTER = '@account/register';
 export const UPDATE_PROFILE = '@account/update-profile';
 
 export function login() {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch({ type: LOGIN_REQUEST });
   };
 }
 
 export function dismissLogin() {
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch({ type: DISMISS_LOGIN });
   };
 }
 
 export function setUserData(user) {
-  return dispatch =>
+  return (dispatch) =>
     dispatch({
       type: SILENT_LOGIN,
       payload: {
-        user
-      }
+        user,
+      },
     });
 }
 
 export function logout() {
-  return async dispatch => {
+  return async (dispatch) => {
     authService.logout();
     dispatch({
-      type: LOGOUT
+      type: LOGOUT,
     });
   };
 }
-

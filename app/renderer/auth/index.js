@@ -10,13 +10,14 @@ function Auth({ children }) {
   useEffect(() => {
     const initAuth = async () => {
       authService.setAxiosInterceptors({
-        onLogout: () => dispatch(logout())
+        onLogout: () => dispatch(logout()),
       });
 
       authService.handleAuthentication(); // initialize Firebase Authentication
-      authService.firebase.auth().onAuthStateChanged(user => { // Listen to auth change
+      authService.firebase.auth().onAuthStateChanged((user) => {
+        // Listen to auth change
         dispatch(setUserData(user));
-        user.getIdToken().then(token => {
+        user.getIdToken().then((token) => {
           authService.setSession(token);
         });
       });
@@ -28,7 +29,7 @@ function Auth({ children }) {
 }
 
 Auth.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 export default Auth;

@@ -1,17 +1,17 @@
-import firebase from 'firebase'
-import axios from 'axios'
+import firebase from 'firebase';
+import axios from 'axios';
 
 class AuthService {
   // Configure Firebase.
   config = {
-    apiKey: "AIzaSyAbqqXtHNIuNrsamkCxRk9sOuMO-ZWDiEk",
-    authDomain: "codeforcauseorg.firebaseapp.com",
-    databaseURL: "https://codeforcauseorg.firebaseio.com",
-    projectId: "codeforcauseorg",
-    storageBucket: "codeforcauseorg.appspot.com",
-    messagingSenderId: "940087336446",
-    appId: "1:940087336446:web:1de6caaf414d75e12bf4af",
-    measurementId: "G-SDYLZFHHBL"
+    apiKey: 'AIzaSyAbqqXtHNIuNrsamkCxRk9sOuMO-ZWDiEk',
+    authDomain: 'codeforcauseorg.firebaseapp.com',
+    databaseURL: 'https://codeforcauseorg.firebaseio.com',
+    projectId: 'codeforcauseorg',
+    storageBucket: 'codeforcauseorg.appspot.com',
+    messagingSenderId: '940087336446',
+    appId: '1:940087336446:web:1de6caaf414d75e12bf4af',
+    measurementId: 'G-SDYLZFHHBL',
   };
 
   // Configure FirebaseUI.
@@ -21,8 +21,8 @@ class AuthService {
     signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
       // Avoid redirects after sign-in.
-      signInSuccessWithAuthResult: () => false
-    }
+      signInSuccessWithAuthResult: () => false,
+    },
   };
 
   firebase = firebase;
@@ -31,8 +31,8 @@ class AuthService {
 
   setAxiosInterceptors = ({ onLogout }) => {
     axios.interceptors.response.use(
-      response => response,
-      error => {
+      (response) => response,
+      (error) => {
         if (error.response && error.response.status === 401) {
           this.setSession(null);
 
@@ -42,7 +42,7 @@ class AuthService {
         }
 
         return Promise.reject(error);
-      }
+      },
     );
   };
 
@@ -51,27 +51,31 @@ class AuthService {
   }
 
   handleEmailAndPasswordLogin(email, password) {
-    this.firebase.auth()
+    this.firebase
+      .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(result => {
+      .then((result) => {
         const user = result.user;
-        console.log(user)
+        console.log(user);
       })
-      .catch(e => {
-        console.log(e)
-      })
+      .catch((e) => {
+        console.log(e);
+      });
   }
 
   handleEmailAndPasswordSignUp(email, password) {
-    this.firebase.auth()
-    .createUserWithEmailAndPassword("ak@gmail.com", "ak@12345678").then(user => {
-      console.log(user)
-    }).catch(e => {
-      if(e.code === "auth/email-already-in-use") {
-        console.log("Todo: Implement snackbar notosnackbar")
-      }
-      console.log(e)
-    })
+    this.firebase
+      .auth()
+      .createUserWithEmailAndPassword('ak@gmail.com', 'ak@12345678')
+      .then((user) => {
+        console.log(user);
+      })
+      .catch((e) => {
+        if (e.code === 'auth/email-already-in-use') {
+          console.log('Todo: Implement snackbar notosnackbar');
+        }
+        console.log(e);
+      });
   }
 
   logout = () => {
@@ -79,7 +83,7 @@ class AuthService {
     this.setSession(null);
   };
 
-  setSession = accessToken => {
+  setSession = (accessToken) => {
     if (accessToken) {
       localStorage.setItem('accessToken', accessToken);
       axios.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
@@ -90,7 +94,6 @@ class AuthService {
   };
 
   getAccessToken = () => localStorage.getItem('accessToken');
-
 }
 
 const authService = new AuthService();

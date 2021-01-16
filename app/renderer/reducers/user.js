@@ -1,15 +1,23 @@
-import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGIN_REQUEST, LOGOUT, SILENT_LOGIN, DISMISS_LOGIN, UPDATE_PROFILE } from '../actions/user';
+import {
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  LOGIN_REQUEST,
+  LOGOUT,
+  SILENT_LOGIN,
+  DISMISS_LOGIN,
+  UPDATE_PROFILE,
+} from '../actions/user';
 import produce from 'immer';
 
 const INITIAL_STATE = {
   user: undefined,
-  login: false
-}
+  login: false,
+};
 
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case LOGIN_REQUEST: {
-      return produce(state, draft => {
+      return produce(state, (draft) => {
         draft.login = true;
       });
     }
@@ -17,7 +25,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case LOGIN_SUCCESS: {
       const { user } = action.payload;
 
-      return produce(state, draft => {
+      return produce(state, (draft) => {
         draft.firebaseUser = user;
       });
     }
@@ -25,13 +33,13 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case SILENT_LOGIN: {
       const { user } = action.payload;
 
-      return produce(state, draft => {
+      return produce(state, (draft) => {
         draft.firebaseUser = user;
       });
     }
 
     case DISMISS_LOGIN: {
-      return produce(state, draft => {
+      return produce(state, (draft) => {
         draft.login = false;
       });
     }
@@ -43,7 +51,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     }
 
     case LOGOUT: {
-      return produce(state, draft => {
+      return produce(state, (draft) => {
         draft.firebaseUser = null;
       });
     }
@@ -51,7 +59,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case UPDATE_PROFILE: {
       const { user } = action.payload;
 
-      return produce(state, draft => {
+      return produce(state, (draft) => {
         draft.firebaseUser = user;
       });
     }
@@ -60,6 +68,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return state;
     }
   }
-}
+};
 
-export default userReducer
+export default userReducer;
