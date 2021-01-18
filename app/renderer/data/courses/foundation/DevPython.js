@@ -16,14 +16,14 @@ export const devPython = {
       link: '',
       priceCut: '₹ 12,000',
       price: '₹ 5,850',
-      active: false
-    }
+      active: false,
+    },
   ],
   projects: [
     {
       title: 'Under Developemnt',
-      img: '/static/images/courses/projects/sudoku.jpg'
-    }
+      img: '/static/images/courses/projects/sudoku.jpg',
+    },
   ],
   sections: [
     {
@@ -40,8 +40,8 @@ export const devPython = {
             'Input-Output on online judge',
             'Coding standards in Java',
             'Methods along with problems',
-            'Setting up debugger'
-          ]
+            'Setting up debugger',
+          ],
         },
         {
           title: 'Arrays & ArrayList',
@@ -54,8 +54,8 @@ export const devPython = {
             'Multi-Dimensional arrays',
             'Rotation in arrays',
             'Intro to ArrayList',
-            'Interview problems on Arrays & ArrayList'
-          ]
+            'Interview problems on Arrays & ArrayList',
+          ],
         },
         {
           title: 'Number theory & Bitmasking',
@@ -67,8 +67,8 @@ export const devPython = {
             'Bitwise operators',
             'Advantages & cost-effectiveness',
             'Backtracking with Bitmasking',
-            'Interview problems'
-          ]
+            'Interview problems',
+          ],
         },
         {
           title: 'String & String-Builder',
@@ -79,8 +79,8 @@ export const devPython = {
             'String pool and need of equals',
             'String operations',
             'StringBuilder operations and optimization',
-            'String Manipulation'
-          ]
+            'String Manipulation',
+          ],
         },
         {
           title: 'Space and Time complexity analysis',
@@ -91,8 +91,8 @@ export const devPython = {
             'Theta, Big-oh, Omega notations',
             'Understanding complexity of loops',
             'Auxiliary vs Total space',
-            'Static & Dynamic Memory Allocation'
-          ]
+            'Static & Dynamic Memory Allocation',
+          ],
         },
         {
           title: 'Recursion & Backtracking',
@@ -103,8 +103,8 @@ export const devPython = {
             'understanding recursive tree',
             'Merge sort & Quick sort',
             'Interview problems on Recursion',
-            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
-          ]
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute',
+          ],
         },
         {
           title: 'Object Oriented Programming',
@@ -116,13 +116,13 @@ export const devPython = {
             'Abstraction, Inheritance, Polymorphism, Encapsulation',
             'Access modifiers',
             'Static & non-static',
-            'final, finally, finalize'
-          ]
+            'final, finally, finalize',
+          ],
         },
         {
           title: 'Under Developemnt',
           classes: 'Classes 19-30',
-          subtopics: []
+          subtopics: [],
         },
         {
           title: 'Dynamic Programming',
@@ -135,43 +135,36 @@ export const devPython = {
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
             'Egg drop problem',
-            'Matrix chain multiplication'
-          ]
-        }
-      ]
-    }
+            'Matrix chain multiplication',
+          ],
+        },
+      ],
+    },
   ],
   slides: [
     {
       heading: '',
       subheading: '',
-      image: 'apps.png'
-    }
+      image: 'apps.png',
+    },
   ],
-  tags: [
-    'Django',
-    'Rest API',
-    'Mongo DB',
-    'Relational DB',
-    'Authentication',
-    'User Management'
-  ],
+  tags: ['Django', 'Rest API', 'Mongo DB', 'Relational DB', 'Authentication', 'User Management'],
   overview: ['Under Developemnt'],
   faqs: [
     {
       title: 'Will this help me with my career path?',
       answer:
-        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
+        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.',
     },
     {
       title: 'How your doubts will get resolved?',
       answer:
-        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
+        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.',
     },
     {
       title: 'Is this course suitable for me?',
       answer:
-        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    }
-  ]
+        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!',
+    },
+  ],
 };

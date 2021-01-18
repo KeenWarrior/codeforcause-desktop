@@ -17,30 +17,30 @@ export const algoJava = {
       priceCut: '₹ 10,000',
       price: '₹ 4,850',
       priceId: 'price_1I0UwsLVU3L7vcSrLw793Cdb',
-      active: false
-    }
+      active: false,
+    },
   ],
   projects: [
     {
       title: 'Automatic Sudoku Solver',
-      img: '/static/images/courses/projects/sudoku.jpg'
+      img: '/static/images/courses/projects/sudoku.jpg',
     },
     {
       title: 'File Encryption and Compression',
-      img: '/static/images/courses/projects/security.jpg'
+      img: '/static/images/courses/projects/security.jpg',
     },
     {
       title: 'Splitwise Cashflow Minimization',
-      img: '/static/images/courses/projects/split.png'
+      img: '/static/images/courses/projects/split.png',
     },
     {
       title: 'Search routes like Google Maps',
-      img: '/static/images/courses/projects/maps.png'
+      img: '/static/images/courses/projects/maps.png',
     },
     {
       title: 'Git Version Control Replica',
-      img: '/static/images/courses/projects/git.png'
-    }
+      img: '/static/images/courses/projects/git.png',
+    },
   ],
 
   sections: [
@@ -59,8 +59,8 @@ export const algoJava = {
             'Input-Output on online judge',
             'Coding standards in Java',
             'Methods along with problems',
-            'Setting up debugger'
-          ]
+            'Setting up debugger',
+          ],
         },
         {
           title: 'Arrays & ArrayList',
@@ -73,8 +73,8 @@ export const algoJava = {
             'Multi-Dimensional arrays',
             'Rotation in arrays',
             'Intro to ArrayList',
-            'Interview problems on Arrays & ArrayList'
-          ]
+            'Interview problems on Arrays & ArrayList',
+          ],
         },
         {
           title: 'Number theory & Bitmasking',
@@ -86,8 +86,8 @@ export const algoJava = {
             'Bitwise operators',
             'Advantages & cost-effectiveness',
             'Backtracking with Bitmasking',
-            'Interview problems'
-          ]
+            'Interview problems',
+          ],
         },
         {
           title: 'String & String-Builder',
@@ -98,8 +98,8 @@ export const algoJava = {
             'String pool and need of equals',
             'String operations',
             'StringBuilder operations and optimization',
-            'String Manipulation'
-          ]
+            'String Manipulation',
+          ],
         },
         {
           title: 'Space and Time complexity analysis',
@@ -110,8 +110,8 @@ export const algoJava = {
             'Theta, Big-oh, Omega notations',
             'Understanding complexity of loops',
             'Auxiliary vs Total space',
-            'Static & Dynamic Memory Allocation'
-          ]
+            'Static & Dynamic Memory Allocation',
+          ],
         },
         {
           title: 'Recursion & Backtracking',
@@ -122,8 +122,8 @@ export const algoJava = {
             'understanding recursive tree',
             'Merge sort & Quick sort',
             'Interview problems on Recursion',
-            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
-          ]
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute',
+          ],
         },
         {
           title: 'Object Oriented Programming',
@@ -135,10 +135,10 @@ export const algoJava = {
             'Abstraction, Inheritance, Polymorphism, Encapsulation',
             'Access modifiers',
             'Static & non-static',
-            'final, finally, finalize'
-          ]
-        }
-      ]
+            'final, finally, finalize',
+          ],
+        },
+      ],
     },
     {
       title: 'Data Structure & Algorithms',
@@ -155,8 +155,8 @@ export const algoJava = {
             'Queue as generic collection',
             'Operations in Queue',
             'Queue using 2 stacks',
-            'Interview problems on Stack & Queue'
-          ]
+            'Interview problems on Stack & Queue',
+          ],
         },
         {
           title: 'LinkedList',
@@ -166,8 +166,8 @@ export const algoJava = {
             'Implementation of LinkedList',
             'Operations in LinkedList',
             'Cycle detection Algorithms',
-            'Problems based on LinkedList'
-          ]
+            'Problems based on LinkedList',
+          ],
         },
         {
           title: 'Binary Trees',
@@ -179,8 +179,8 @@ export const algoJava = {
             'Calculate- hieght, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
-            'Interview problems on BT & BST'
-          ]
+            'Interview problems on BT & BST',
+          ],
         },
         {
           title: 'Heap & HashMap',
@@ -192,8 +192,8 @@ export const algoJava = {
             'Concept of Hashing',
             'HashMap implementation using ArrayList & LinkedList',
             'Types of Maps in Java collections',
-            'Problems on Hashmap & Heaps'
-          ]
+            'Problems on Hashmap & Heaps',
+          ],
         },
         {
           title: 'Graph',
@@ -205,8 +205,8 @@ export const algoJava = {
             'AdjacencyMap implementation',
             'Searching Algorithms- DFS and BFS',
             'Connected component, Cycle detection',
-            "Kruskal's, Dijkstra's, Prim's Algorithms"
-          ]
+            "Kruskal's, Dijkstra's, Prim's Algorithms",
+          ],
         },
         {
           title: 'Dynamic Programming',
@@ -219,18 +219,19 @@ export const algoJava = {
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
             'Egg drop problem',
-            'Matrix chain multiplication'
-          ]
-        }
-      ]
-    }
+            'Matrix chain multiplication',
+          ],
+        },
+      ],
+    },
   ],
   slides: [
     {
       heading: '',
       subheading: '',
-      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fjava.png?alt=media&token=c8e4cd2e-30b7-4f83-add5-83d500529da4'
-    }
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fjava.png?alt=media&token=c8e4cd2e-30b7-4f83-add5-83d500529da4',
+    },
   ],
   tags: [
     'Problem Solving',
@@ -245,27 +246,27 @@ export const algoJava = {
     'Queue',
     'Sets',
     'Bit Masking',
-    'Interview Prep'
+    'Interview Prep',
   ],
   overview: [
     'Every students have in their mind that why to study Data Structure. How it helps me in real life problem? Data Structures are the most important skills for a person belonging to computer-science background to understand the nature of problems, develop the logic to solve a problem in an optimised way with an efficient use of appropriate Data Structures.',
-    'From Competitive programming to development, the first step on the success ladder will be to master in Data Structures & Algorithms. To solve any real-life problem, we use an algorithm, but is that algorithm is the most optimised and efficient one? Today, every company believes that a person with strong DSA skills would be a perfect candidate to hire!'
+    'From Competitive programming to development, the first step on the success ladder will be to master in Data Structures & Algorithms. To solve any real-life problem, we use an algorithm, but is that algorithm is the most optimised and efficient one? Today, every company believes that a person with strong DSA skills would be a perfect candidate to hire!',
   ],
   faqs: [
     {
       title: 'Will this help me with my career path?',
       answer:
-        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
+        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.',
     },
     {
       title: 'How your doubts will get resolved?',
       answer:
-        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
+        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.',
     },
     {
       title: 'Is this course suitable for me?',
       answer:
-        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    }
-  ]
+        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!',
+    },
+  ],
 };

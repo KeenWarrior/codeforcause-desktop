@@ -1,41 +1,35 @@
-import {
-  GridList,
-  GridListTile,
-  makeStyles,
-  Typography,
-  useMediaQuery
-} from '@material-ui/core';
+import { GridList, GridListTile, makeStyles, Typography, useMediaQuery } from '@material-ui/core';
 import React from 'react';
-import CourseCard1 from '../../components/courseCards/CourseCardTemplate1'
+import CourseCard1 from '../../components/courseCards/CourseCardTemplate1';
 import coursesContent from '../../data/courses';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '80%',
     margin: '20px auto 60px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      margin: 0
+      margin: 0,
     },
 
     gridList: {
       flexWrap: 'nowrap',
       width: '100%',
       // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-      transform: 'translateZ(0)'
-    }
+      transform: 'translateZ(0)',
+    },
   },
 
   gridList: {
     flexWrap: 'nowrap',
     width: '100%',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
   },
   padding: {
-    padding: '60px 0 40px'
-  }
+    padding: '60px 0 40px',
+  },
 }));
 
 export default function Recommendations() {
@@ -57,20 +51,17 @@ export default function Recommendations() {
         className={classes.gridList}
         display="flex"
         alignItems="center"
-        cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
-      >
+        cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}>
         <GridListTile
           style={{
-            height: '530px'
-          }}
-        >
+            height: '530px',
+          }}>
           <CourseCard1 course={foundation.algoJava} />
         </GridListTile>
         <GridListTile
           style={{
-            height: '530px'
-          }}
-        >
+            height: '530px',
+          }}>
           <CourseCard1 course={advanced.webDevelopment} />
         </GridListTile>
       </GridList>

@@ -17,34 +17,34 @@ export const machineLearning = {
       priceCut: '₹ 20,000',
       price: '₹ 9,900',
       priceId: 'price_1I0qOjLVU3L7vcSrMplYFrFV',
-      active: true
-    }
+      active: true,
+    },
   ],
   projects: [
     {
       title: 'Movie Recommendation System',
-      img: '/static/images/courses/projects/ml/movie.jpg'
+      img: '/static/images/courses/projects/ml/movie.jpg',
     },
     {
       title: 'Face Detection and Recognition',
-      img: '/static/images/courses/projects/ml/face.jpg'
+      img: '/static/images/courses/projects/ml/face.jpg',
     },
     {
       title: 'Image Classsification with Neural Network',
-      img: '/static/images/courses/projects/ml/classification.jpg'
+      img: '/static/images/courses/projects/ml/classification.jpg',
     },
     {
       title: 'Text Based Sentiment Analysis',
-      img: '/static/images/courses/projects/ml/sentiment.png'
+      img: '/static/images/courses/projects/ml/sentiment.png',
     },
     {
       title: 'Generate new faces with GAN',
-      img: '/static/images/courses/projects/ml/gan.jpg'
+      img: '/static/images/courses/projects/ml/gan.jpg',
     },
     {
       title: 'Simmulator Learning with OpenAI Gym',
-      img: '/static/images/courses/projects/ml/gym.jpg'
-    }
+      img: '/static/images/courses/projects/ml/gym.jpg',
+    },
   ],
   sections: [
     {
@@ -63,8 +63,8 @@ export const machineLearning = {
             'File Handling',
             'Coding standards in Python',
             'Methods along with problems',
-            'Setting up debugger'
-          ]
+            'Setting up debugger',
+          ],
         },
         {
           title: 'Lists & NumPy Arrays',
@@ -77,8 +77,8 @@ export const machineLearning = {
             'Multi-Dimensional Arrays',
             'Rotation in Arrays',
             'Intro to NumPy',
-            'Interview problems on Arrays'
-          ]
+            'Interview problems on Arrays',
+          ],
         },
         {
           title: 'Number theory & Bitmasking',
@@ -90,8 +90,8 @@ export const machineLearning = {
             'Bitwise operators',
             'Advantages & cost-effectiveness',
             'Backtracking with Bitmasking',
-            'Interview problems'
-          ]
+            'Interview problems',
+          ],
         },
         {
           title: 'Strings',
@@ -101,8 +101,8 @@ export const machineLearning = {
             'Mutability and Behavior',
             'is vs ==',
             'String operations',
-            'String Manipulation'
-          ]
+            'String Manipulation',
+          ],
         },
         {
           title: 'Space and Time complexity analysis',
@@ -115,8 +115,8 @@ export const machineLearning = {
             'Theta, Big-oh, Omega notations',
             'Understanding complexity of loops',
             'Auxiliary vs Total Space',
-            'Static & Dynamic Memory Allocation'
-          ]
+            'Static & Dynamic Memory Allocation',
+          ],
         },
         {
           title: 'Recursion & Backtracking',
@@ -127,8 +127,8 @@ export const machineLearning = {
             'Understanding Recursive Tree',
             'Merge sort & Quick sort',
             'Interview problems on Recursion',
-            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
-          ]
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute',
+          ],
         },
         {
           title: 'Object Oriented Programming',
@@ -141,10 +141,10 @@ export const machineLearning = {
             'Scopes & Closures',
             'Static & non-static',
             'Class Methods',
-            'Decorators, Iterators & Generators'
-          ]
-        }
-      ]
+            'Decorators, Iterators & Generators',
+          ],
+        },
+      ],
     },
     {
       title: 'Data Structure & Algorithms',
@@ -161,8 +161,8 @@ export const machineLearning = {
             'Queue as generic collection',
             'Operations in Queue',
             'Queue using 2 stacks',
-            'Interview problems on Stack & Queue'
-          ]
+            'Interview problems on Stack & Queue',
+          ],
         },
         {
           title: 'LinkedList',
@@ -172,8 +172,8 @@ export const machineLearning = {
             'Implementation of LinkedList',
             'Operations in LinkedList',
             'Cycle detection Algorithms',
-            'Problems based on LinkedList'
-          ]
+            'Problems based on LinkedList',
+          ],
         },
         {
           title: 'Binary Trees',
@@ -185,8 +185,8 @@ export const machineLearning = {
             'Calculate- hieght, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
-            'Interview problems on BT & BST'
-          ]
+            'Interview problems on BT & BST',
+          ],
         },
         {
           title: 'Heap & Dictionary',
@@ -196,8 +196,8 @@ export const machineLearning = {
             'HeapSort with complexity analysis',
             'Concept of Hashing',
             'Dictionary implementation',
-            'Problems on Dictionary & Heaps'
-          ]
+            'Problems on Dictionary & Heaps',
+          ],
         },
         {
           title: 'Graph',
@@ -209,8 +209,8 @@ export const machineLearning = {
             'AdjacencyMap implementation',
             'Searching Algorithms- DFS, BFS',
             'Connected component, Cycle detection',
-            "Kruskal's, Dijkstra's, Prim's Algorithms"
-          ]
+            "Kruskal's, Dijkstra's, Prim's Algorithms",
+          ],
         },
         {
           title: 'Dynamic Programming',
@@ -223,10 +223,10 @@ export const machineLearning = {
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
             'Egg drop problem',
-            'Matrix chain multiplication'
-          ]
-        }
-      ]
+            'Matrix chain multiplication',
+          ],
+        },
+      ],
     },
     {
       title: 'Classical ML Algos and NLP',
@@ -239,8 +239,8 @@ export const machineLearning = {
             'In-built Data Structures',
             'Control Flow Statements ',
             'Underatanding OOPS and Modules',
-            'Various File operations'
-          ]
+            'Various File operations',
+          ],
         },
         {
           title: 'Data Discovery and Visualiation',
@@ -250,8 +250,8 @@ export const machineLearning = {
             'Processing Images with Numpy',
             'Data Acquisition - Web Scrapping, Web APIs',
             'Data Analysis using Pandas',
-            'Importing and Exporting Data '
-          ]
+            'Importing and Exporting Data ',
+          ],
         },
         {
           title: 'Classical Machine Learning Algorithms',
@@ -263,8 +263,8 @@ export const machineLearning = {
             'Logistic Regression',
             'Decision trees and Ensembling Learning',
             'Random Forest Classifiers',
-            'Support Vector Machines'
-          ]
+            'Support Vector Machines',
+          ],
         },
         {
           title: 'Natural Language Processing',
@@ -273,10 +273,10 @@ export const machineLearning = {
             'Text generation using Markov Chain',
             'Text classification using Naive Bayes',
             'Deploy ML model with flask on heroku',
-            'Create a facebook chatbot with flask'
-          ]
-        }
-      ]
+            'Create a facebook chatbot with flask',
+          ],
+        },
+      ],
     },
     {
       title: 'Deep Learning with Linear, Image and Signal Processing',
@@ -290,8 +290,8 @@ export const machineLearning = {
             'Deep Learning with Keras',
             'Convolutions and the GoogLeNet',
             'Transfer Learning with ResNet and AlexNet',
-            'Dimensionality Reduction using Auto-encoders'
-          ]
+            'Dimensionality Reduction using Auto-encoders',
+          ],
         },
         {
           title: 'Advanced Deep Learning',
@@ -301,8 +301,8 @@ export const machineLearning = {
             'Long Short Term Memory',
             'Music Generation using LSTM',
             'Predict Gender from name with LSTM',
-            'Generative Adversarial Nets'
-          ]
+            'Generative Adversarial Nets',
+          ],
         },
         {
           title: 'Reinforcemnt Learning',
@@ -311,18 +311,19 @@ export const machineLearning = {
             'Foundational Reinforcemnt Learning',
             'Evolutionary Algorithms and Genetic Algorithms',
             'Deep Q-learning and training',
-            'Training on OpenAI Gym Simulators'
-          ]
-        }
-      ]
-    }
+            'Training on OpenAI Gym Simulators',
+          ],
+        },
+      ],
+    },
   ],
   slides: [
     {
       heading: '',
       subheading: '',
-      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fml.png?alt=media&token=80bcdf3d-a134-4d7b-90a4-486da7f9fad3'
-    }
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fml.png?alt=media&token=80bcdf3d-a134-4d7b-90a4-486da7f9fad3',
+    },
   ],
   tags: [
     'Deep Learning',
@@ -342,27 +343,27 @@ export const machineLearning = {
     'GAN',
     'Simmulators',
     'Reinforcement Learning',
-    'Genetic Algorithm'
+    'Genetic Algorithm',
   ],
   overview: [
     'Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.',
-    'We follow the onion peeling approach to create a level order approach towards such great technologies. You do not have to mug up a lot of formulas and maths to become great at machine learning. Understanding what can be done and how to proceed with understanding what is important and start exploring it the right way. We will guide you to build your career in machine learning.'
+    'We follow the onion peeling approach to create a level order approach towards such great technologies. You do not have to mug up a lot of formulas and maths to become great at machine learning. Understanding what can be done and how to proceed with understanding what is important and start exploring it the right way. We will guide you to build your career in machine learning.',
   ],
   faqs: [
     {
       title: 'Will this help me with my career path?',
       answer:
-        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
+        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.',
     },
     {
       title: 'How your doubts will get resolved?',
       answer:
-        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
+        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.',
     },
     {
       title: 'Is this course suitable for me?',
       answer:
-        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    }
-  ]
+        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!',
+    },
+  ],
 };

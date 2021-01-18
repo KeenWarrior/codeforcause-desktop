@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     background: '#FBFCFF',
     height: '100%',
@@ -12,15 +12,15 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     borderRadius: '10px',
     margin: '12px',
-    boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.13)'
+    boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.13)',
   },
   cardContent: {
-    margin: '15px 5px'
+    margin: '15px 5px',
   },
   mainIcon: {
     textAlign: 'center',
-    padding: '80px 0px 20px'
-  }
+    padding: '80px 0px 20px',
+  },
 }));
 
 export default function NotEnrolled() {
@@ -31,18 +31,19 @@ export default function NotEnrolled() {
         className={classes.card}
         display="flex"
         style={{
-          maxWidth: '320px'
-        }}
-      >
+          maxWidth: '320px',
+        }}>
         <CardContent className={clsx(classes.cardContent, classes.mainIcon)}>
-          <img src="https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Ferror.svg?alt=media&token=36cbb60a-f1fd-450d-97c7-f5818017e4d1" alt="error" />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Ferror.svg?alt=media&token=36cbb60a-f1fd-450d-97c7-f5818017e4d1"
+            alt="error"
+          />
         </CardContent>
         <CardContent style={{ textAlign: 'center', padding: '0px 40px 36px' }}>
           <Typography
             align="center"
             variant="h5"
-            style={{ fontSize: '18px', color: '#000', paddingBottom: '12px' }}
-          >
+            style={{ fontSize: '18px', color: '#000', paddingBottom: '12px' }}>
             You Have Not Enrolled In Any Course Yet!!
           </Typography>
           <Typography align="center" variant="body2">
@@ -58,15 +59,13 @@ export default function NotEnrolled() {
             background: '#A60000',
             color: '#FF4C00',
             textDecoration: 'none',
-            marginBottom: '16px'
-          }}
-        >
+            marginBottom: '16px',
+          }}>
           <Typography
             align="center"
             style={{
-              color: '#FFFFFF'
-            }}
-          >
+              color: '#FFFFFF',
+            }}>
             <Box m={1} fontWeight={600}>
               Explore Courses
             </Box>
@@ -76,12 +75,10 @@ export default function NotEnrolled() {
           style={{
             fontSize: '0.56rem',
             padding: '0px 12px 10px',
-            color: '#787878'
+            color: '#787878',
           }}
-          variant="caption"
-        >
-          Enroll into the course now and get flat 10% off on any course from
-          code for cause.
+          variant="caption">
+          Enroll into the course now and get flat 10% off on any course from code for cause.
         </Typography>
       </Card>
     </Box>

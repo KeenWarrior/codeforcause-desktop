@@ -4,12 +4,13 @@ import ParallaxSlide from '@mui-treasury/components/slide/parallax';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FIREBASE_STORAGE_URL = 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2F'
+const FIREBASE_STORAGE_URL =
+  'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2F';
 const FIREBASE_STORAGE_TRAIL = '?alt=media&token=80bcdf3d-a134-4d7b-90a4-486da7f9fad3';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   icon: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   root: {
     padding: theme.spacing(10, 10, 10),
@@ -17,12 +18,12 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(10, 3, 10)
-    }
+      padding: theme.spacing(10, 3, 10),
+    },
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8)
+    paddingBottom: theme.spacing(8),
   },
   card: {
     height: '100%',
@@ -30,46 +31,46 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     borderRadius: '10px',
     margin: '12px',
-    boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.13)'
+    boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.13)',
   },
   cardMedia: {
     width: '100%',
-    height: 'auto'
+    height: 'auto',
     // paddingTop: "56.25%", // 16:9
   },
   cardContent: {
-    padding: '16px 0px 16px 16px'
+    padding: '16px 0px 16px 16px',
   },
   chipActions: {
-    display: 'block'
+    display: 'block',
   },
   chip: {
-    margin: '8px 0 3px 8px'
+    margin: '8px 0 3px 8px',
   },
   extraMargin: {
     marginTop: '15px',
-    marginBottom: '0'
+    marginBottom: '0',
   },
   btn: {
-    textTransform: 'none'
+    textTransform: 'none',
   },
   paddingCls: {
     paddingLeft: '10px',
-    paddingRight: '10px'
+    paddingRight: '10px',
   },
   paddingClsxs: {
-    padding: 0
+    padding: 0,
   },
   iconSize: {
-    fontSize: '32px'
+    fontSize: '32px',
   },
   text: {
-    color: '#FFFFFF'
+    color: '#FFFFFF',
   },
   avatarLarge: {
     width: theme.spacing(16),
     height: theme.spacing(16),
-    margin: theme.spacing(4, 0, 2)
+    margin: theme.spacing(4, 0, 2),
   },
 
   avatarGrid: {
@@ -77,26 +78,26 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '5px'
+    padding: '5px',
   },
 
   slide: {
     perspective: 0, // create perspective
     overflow: 'hidden',
     // relative is a must if you want to create overlapping layers in children
-    position: 'relative'
+    position: 'relative',
   },
   background: {
     width: '100%',
     height: 'auto',
     backgroundPosition: 'bottom center',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
   },
   gridList: {
     flexWrap: 'nowrap',
     width: '100%',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
   },
   bottomCardContent: {
     margin: '0px 8px 18px 0px',
@@ -104,8 +105,8 @@ const useStyles = makeStyles(theme => ({
     border: '1px solid',
     borderColor: '#A60000',
     borderRadius: '5px',
-    width: 'min-content'
-  }
+    width: 'min-content',
+  },
 }));
 
 export default function CourseCard({ course }) {
@@ -116,9 +117,8 @@ export default function CourseCard({ course }) {
         className={classes.card}
         display="flex"
         style={{
-          maxWidth: '320px'
-        }}
-      >
+          maxWidth: '320px',
+        }}>
         <CardContent>
           <Box display="flex" flexDirection="column">
             <Typography
@@ -126,9 +126,8 @@ export default function CourseCard({ course }) {
               variant="h4"
               style={{
                 color: '#0085FF',
-                paddingTop: '14px'
-              }}
-            >
+                paddingTop: '14px',
+              }}>
               {course.difficulty}
             </Typography>
             <Typography
@@ -136,17 +135,12 @@ export default function CourseCard({ course }) {
               variant="h5"
               color="secondary"
               style={{
-                margin: '12px 0'
-              }}
-            >
+                margin: '12px 0',
+              }}>
               {course.domain}
             </Typography>
 
-            <Typography
-              variant="h4"
-              align="left"
-              style={{ fontWeight: 700, width: '105%' }}
-            >
+            <Typography variant="h4" align="left" style={{ fontWeight: 700, width: '105%' }}>
               {course.title}
             </Typography>
           </Box>
@@ -161,15 +155,13 @@ export default function CourseCard({ course }) {
             display="flex"
             flexDirection="row"
             flexWrap="wrap"
-            style={{ width: '102%' }}
-          >
+            style={{ width: '102%' }}>
             {course.tags.slice(0, 3).map((tag, index) => (
               <div className={classes.bottomCardContent} variant="outlined">
                 <Typography
                   style={{ color: '#a60000', fontWeight: 500 }}
                   variant="caption"
-                  noWrap={true}
-                >
+                  noWrap={true}>
                   {tag}
                 </Typography>
               </div>
@@ -181,16 +173,14 @@ export default function CourseCard({ course }) {
               display="flex"
               flexDirection="row"
               style={{
-                marginBottom: '8px'
-              }}
-            >
+                marginBottom: '8px',
+              }}>
               <Typography
                 variant="caption"
                 style={{
                   marginRight: '8px',
-                  color: '#A3A3A3'
-                }}
-              >
+                  color: '#A3A3A3',
+                }}>
                 Duration
               </Typography>
               <Typography variant="caption">{course.duration}</Typography>
@@ -200,17 +190,15 @@ export default function CourseCard({ course }) {
               display="flex"
               flexDirection="row"
               style={{
-                marginTop: '4px'
-              }}
-            >
+                marginTop: '4px',
+              }}>
               <Typography
                 variant="caption"
                 style={{
                   marginRight: '8px',
                   marginBottom: '8px',
-                  color: '#A3A3A3'
-                }}
-              >
+                  color: '#A3A3A3',
+                }}>
                 Upcoming
               </Typography>
               <Typography variant="caption">{course.upcoming}</Typography>
@@ -226,18 +214,16 @@ export default function CourseCard({ course }) {
             background: '#A60000',
             color: '#FF4C00',
             textDecoration: 'none',
-            marginBottom: '16px'
-          }}
-        >
+            marginBottom: '16px',
+          }}>
           <Box m={1}>
             <Typography
               align="center"
               variant="h6"
               style={{
                 color: '#fff',
-                padding: '8px 0px'
-              }}
-            >
+                padding: '8px 0px',
+              }}>
               Check Details
             </Typography>
           </Box>
@@ -258,9 +244,8 @@ const ParallaxCarousel = ({ slides }) => {
           style={{
             height: '160px',
             width: '100%',
-            color: '#FFFFFF'
-          }}
-        >
+            color: '#FFFFFF',
+          }}>
           <img
             src={slide.image}
             alt=""
@@ -269,7 +254,7 @@ const ParallaxCarousel = ({ slides }) => {
               width: '100%',
               color: '#FFFFFF',
               padding: '8px 0px',
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}
           />
         </Box>

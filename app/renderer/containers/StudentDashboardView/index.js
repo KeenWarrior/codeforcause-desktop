@@ -11,8 +11,8 @@ const useStyles = makeStyles(() => ({
   hr: {
     margin: '60px auto 10px',
     width: '80%',
-    color: '#898989, 50%'
-  }
+    color: '#898989, 50%',
+  },
 }));
 
 function StudentDashboardView() {

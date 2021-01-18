@@ -17,30 +17,30 @@ export const competitiveJava = {
       priceCut: '₹ 20,000',
       price: '₹ 9,900',
       priceId: 'price_1I0qKLLVU3L7vcSrULlRk1ek',
-      active: false
-    }
+      active: false,
+    },
   ],
   projects: [
     {
       title: 'Automatic Sudoku Solver',
-      img: '/static/images/courses/projects/sudoku.jpg'
+      img: '/static/images/courses/projects/sudoku.jpg',
     },
     {
       title: 'File Encryption and Compression',
-      img: '/static/images/courses/projects/security.jpg'
+      img: '/static/images/courses/projects/security.jpg',
     },
     {
       title: 'Splitwise Cashflow Minimization',
-      img: '/static/images/courses/projects/split.png'
+      img: '/static/images/courses/projects/split.png',
     },
     {
       title: 'Search routes like Google Maps',
-      img: '/static/images/courses/projects/maps.png'
+      img: '/static/images/courses/projects/maps.png',
     },
     {
       title: 'Git Version Control Replica',
-      img: '/static/images/courses/projects/git.png'
-    }
+      img: '/static/images/courses/projects/git.png',
+    },
   ],
   sections: [
     {
@@ -58,8 +58,8 @@ export const competitiveJava = {
             'Input-Output on online judge',
             'Coding standards in Java',
             'Methods along with problems',
-            'Setting up debugger'
-          ]
+            'Setting up debugger',
+          ],
         },
         {
           title: 'Arrays & ArrayList',
@@ -72,8 +72,8 @@ export const competitiveJava = {
             'Multi-Dimensional arrays',
             'Rotation in arrays',
             'Intro to ArrayList',
-            'Interview problems on Arrays & ArrayList'
-          ]
+            'Interview problems on Arrays & ArrayList',
+          ],
         },
         {
           title: 'Number theory & Bitmasking',
@@ -85,8 +85,8 @@ export const competitiveJava = {
             'Bitwise operators',
             'Advantages & cost-effectiveness',
             'Backtracking with Bitmasking',
-            'Interview problems'
-          ]
+            'Interview problems',
+          ],
         },
         {
           title: 'String & String-Builder',
@@ -97,8 +97,8 @@ export const competitiveJava = {
             'String pool and need of equals',
             'String operations',
             'StringBuilder operations and optimization',
-            'String Manipulation'
-          ]
+            'String Manipulation',
+          ],
         },
         {
           title: 'Space and Time complexity analysis',
@@ -109,8 +109,8 @@ export const competitiveJava = {
             'Theta, Big-oh, Omega notations',
             'Understanding complexity of loops',
             'Auxiliary vs Total space',
-            'Static & Dynamic Memory Allocation'
-          ]
+            'Static & Dynamic Memory Allocation',
+          ],
         },
         {
           title: 'Recursion & Backtracking',
@@ -121,8 +121,8 @@ export const competitiveJava = {
             'understanding recursive tree',
             'Merge sort & Quick sort',
             'Interview problems on Recursion',
-            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
-          ]
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute',
+          ],
         },
         {
           title: 'Object Oriented Programming',
@@ -134,10 +134,10 @@ export const competitiveJava = {
             'Abstraction, Inheritance, Polymorphism, Encapsulation',
             'Access modifiers',
             'Static & non-static',
-            'final, finally, finalize'
-          ]
-        }
-      ]
+            'final, finally, finalize',
+          ],
+        },
+      ],
     },
     {
       title: 'Data Structure & Algorithms',
@@ -154,8 +154,8 @@ export const competitiveJava = {
             'Queue as generic collection',
             'Operations in Queue',
             'Queue using 2 stacks',
-            'Interview problems on Stack & Queue'
-          ]
+            'Interview problems on Stack & Queue',
+          ],
         },
         {
           title: 'LinkedList',
@@ -165,8 +165,8 @@ export const competitiveJava = {
             'Implementation of LinkedList',
             'Operations in LinkedList',
             'Cycle detection Algorithms',
-            'Problems based on LinkedList'
-          ]
+            'Problems based on LinkedList',
+          ],
         },
         {
           title: 'Binary Trees',
@@ -178,8 +178,8 @@ export const competitiveJava = {
             'Calculate- hieght, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
-            'Interview problems on BT & BST'
-          ]
+            'Interview problems on BT & BST',
+          ],
         },
         {
           title: 'Heap & HashMap',
@@ -191,8 +191,8 @@ export const competitiveJava = {
             'Concept of Hashing',
             'HashMap implementation using ArrayList & LinkedList',
             'Types of Maps in Java collections',
-            'Problems on Hashmap & Heaps'
-          ]
+            'Problems on Hashmap & Heaps',
+          ],
         },
         {
           title: 'Graph',
@@ -204,8 +204,8 @@ export const competitiveJava = {
             'AdjacencyMap implementation',
             'Searching Algorithms- DFS and BFS',
             'Connected component, Cycle detection',
-            "Kruskal's, Dijkstra's and Prim's Algorithm"
-          ]
+            "Kruskal's, Dijkstra's and Prim's Algorithm",
+          ],
         },
         {
           title: 'Dynamic Programming',
@@ -218,10 +218,10 @@ export const competitiveJava = {
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
             'Egg drop problem',
-            'Matrix chain multiplication'
-          ]
-        }
-      ]
+            'Matrix chain multiplication',
+          ],
+        },
+      ],
     },
     {
       title: 'Advance Competetive Algorithms',
@@ -234,8 +234,8 @@ export const competitiveJava = {
             'In-built Data Structures',
             'Classes, Interfaces and Inheritance',
             'Best practices with Generics and Collections',
-            'lurking over recursion problems'
-          ]
+            'lurking over recursion problems',
+          ],
         },
         {
           title: 'Understanding online platforms: Codeforces & Leetcode',
@@ -243,8 +243,8 @@ export const competitiveJava = {
           subtopics: [
             'Start Competitive Programming on Codeforces',
             'Set up IntelliJ idea for Competitive Coding',
-            'Create Template to save time in Competitive Coding'
-          ]
+            'Create Template to save time in Competitive Coding',
+          ],
         },
         {
           title: 'Bit Masking and Manipulation',
@@ -254,8 +254,8 @@ export const competitiveJava = {
             'Fast Exponentiation using Bitmasking',
             'Generate Subsets using Bitmasking',
             'Decimal to Binary using Bitwise',
-            'Inclusion Exclusion Concept + Implementation'
-          ]
+            'Inclusion Exclusion Concept + Implementation',
+          ],
         },
         {
           title: 'Number theory & Computational Theory',
@@ -269,8 +269,8 @@ export const competitiveJava = {
             'Pigeonhole Principle',
             'Extended Euclids Algorithms',
             'Willsons Theorem',
-            'Pollards rho Theorem'
-          ]
+            'Pollards rho Theorem',
+          ],
         },
         {
           title: 'Divide & Conquer Algorithms',
@@ -281,8 +281,8 @@ export const competitiveJava = {
             'Second largest element',
             'Painter partition problem',
             'Aggressive Cows',
-            'Tilling problem'
-          ]
+            'Tilling problem',
+          ],
         },
         {
           title: 'Recursion & Backtracking',
@@ -297,8 +297,8 @@ export const competitiveJava = {
             'Subset sum',
             'M coloring problem',
             'Lexical permutation',
-            'N-Queens & N-Knights'
-          ]
+            'N-Queens & N-Knights',
+          ],
         },
         {
           title: 'Dynamic Programming',
@@ -314,8 +314,8 @@ export const competitiveJava = {
             'Matrix chain multiplication',
             'Wildcard Matching',
             'Longest Increasing Subsequence',
-            'Maximum Subarray Sum'
-          ]
+            'Maximum Subarray Sum',
+          ],
         },
         {
           title: 'Greedy Algorithms',
@@ -328,10 +328,10 @@ export const competitiveJava = {
             'Efficient Huffman encoding & decoding',
             'Assign mice to holes',
             'Minimum Spanning Tree',
-            'Memory Management Algorithms'
-          ]
-        }
-      ]
+            'Memory Management Algorithms',
+          ],
+        },
+      ],
     },
     {
       title: 'Advanced non-linear data structures',
@@ -347,8 +347,8 @@ export const competitiveJava = {
             'Calculate- height, depth and diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
-            'Interview problems on BT & BST'
-          ]
+            'Interview problems on BT & BST',
+          ],
         },
         {
           title: 'String Matching',
@@ -358,8 +358,8 @@ export const competitiveJava = {
             'String window problems',
             'String Hashing',
             'Rabin Karp Algorithm',
-            'Knuth Morris Pratt Algorithm'
-          ]
+            'Knuth Morris Pratt Algorithm',
+          ],
         },
         {
           title: 'Tries',
@@ -370,8 +370,8 @@ export const competitiveJava = {
             'Max XOR pair',
             'Library Bookmarks',
             'Range XOR',
-            'Trie Interview problem'
-          ]
+            'Trie Interview problem',
+          ],
         },
         {
           title: 'Segment Tree',
@@ -385,8 +385,8 @@ export const competitiveJava = {
             'Xenia & Bit operations[Codeforces]',
             'Alpha & his arrays',
             'Greatest common divisor',
-            'Distinct Integers in range'
-          ]
+            'Distinct Integers in range',
+          ],
         },
         {
           title: 'Fenwick Tree',
@@ -398,8 +398,8 @@ export const competitiveJava = {
             'Inversion count',
             '2D Binary Indexed Tree',
             'No. of elements greater than K in [L,R] range',
-            'Range Queries problems'
-          ]
+            'Range Queries problems',
+          ],
         },
         {
           title: 'Graphs',
@@ -414,8 +414,8 @@ export const competitiveJava = {
             'Bipartite Graph',
             "Kruskal's, Dijkstra's, Prim's Algorithms",
             "Kosaraju's Algorithm",
-            'Dynamic Programming with Graphs'
-          ]
+            'Dynamic Programming with Graphs',
+          ],
         },
         {
           title: 'Advanced Mathematics',
@@ -428,8 +428,8 @@ export const competitiveJava = {
             'Square Root Decompositions',
             'Segmented Sieve',
             'Modulo inverse',
-            'Lucas Theorem'
-          ]
+            'Lucas Theorem',
+          ],
         },
         {
           title: 'Game Theory',
@@ -438,18 +438,19 @@ export const competitiveJava = {
             'Concept around Game theory',
             'Combinational Game theory',
             'Game of chocolates',
-            'Robot problems'
-          ]
-        }
-      ]
-    }
+            'Robot problems',
+          ],
+        },
+      ],
+    },
   ],
   slides: [
     {
       heading: '',
       subheading: '',
-      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fcomp.png?alt=media&token=2d950d7c-a535-4cad-8ba8-d3b43c8136eb'
-    }
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fcomp.png?alt=media&token=2d950d7c-a535-4cad-8ba8-d3b43c8136eb',
+    },
   ],
   tags: [
     'Dynamic Programming',
@@ -460,27 +461,27 @@ export const competitiveJava = {
     'Number Theory',
     'Segment Tree',
     'Fenwick Tree',
-    'Decompositions'
+    'Decompositions',
   ],
   overview: [
     'During the course, you’ll learn everything needed to participate in real competitions — that’s the main goal. Along the way you’ll also gain useful skills for which competitive programmers are so highly valued by employers: ability to write efficient, reliable, and compact code, manage your time well when it’s limited, apply basic algorithmic ideas to real problems, etc.',
-    'We start from the very beginning by teaching you what competitions there are, what are their rules, what specifics problems have, how to read problem statements, how to organize your work, and what you should and shouldn’t do. So it’s fine if you’ve never taken part in programming competitions before.'
+    'We start from the very beginning by teaching you what competitions there are, what are their rules, what specifics problems have, how to read problem statements, how to organize your work, and what you should and shouldn’t do. So it’s fine if you’ve never taken part in programming competitions before.',
   ],
   faqs: [
     {
       title: 'Will this help me with my career path?',
       answer:
-        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
+        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.',
     },
     {
       title: 'How your doubts will get resolved?',
       answer:
-        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
+        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.',
     },
     {
       title: 'Is this course suitable for me?',
       answer:
-        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    }
-  ]
+        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!',
+    },
+  ],
 };

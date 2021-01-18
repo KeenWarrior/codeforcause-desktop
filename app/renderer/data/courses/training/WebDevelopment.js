@@ -18,30 +18,30 @@ export const webDevelopment = {
       priceCut: '₹ 20,000',
       price: '₹ 9,900',
       priceId: 'price_1I0qNVLVU3L7vcSr4PmkT5pK',
-      active: true
-    }
+      active: true,
+    },
   ],
   projects: [
     {
       title: 'Vendor App with Payment Gateway',
-      img: '/static/images/courses/projects/payment.jpg'
+      img: '/static/images/courses/projects/payment.jpg',
     },
     {
       title: 'GitHub CLI Replica',
-      img: '/static/images/courses/projects/githubcli.png'
+      img: '/static/images/courses/projects/githubcli.png',
     },
     {
       title: 'Protfolio Website to Standout',
-      img: '/static/images/courses/projects/portfolio.png'
+      img: '/static/images/courses/projects/portfolio.png',
     },
     {
       title: 'Pastebin snippet Pusher',
-      img: '/static/images/courses/projects/apicall.jpg'
+      img: '/static/images/courses/projects/apicall.jpg',
     },
     {
       title: 'Chat App with WebSockets',
-      img: '/static/images/courses/projects/chat.jpg'
-    }
+      img: '/static/images/courses/projects/chat.jpg',
+    },
   ],
   sections: [
     {
@@ -60,8 +60,8 @@ export const webDevelopment = {
             'File Handling',
             'Coding standards in JavaScript',
             'functions along with problems',
-            'Setting up debugger'
-          ]
+            'Setting up debugger',
+          ],
         },
         {
           title: 'Arrays in JavaScript',
@@ -72,8 +72,8 @@ export const webDevelopment = {
             'Linear Search & Binary Search',
             'Bubble sort, Insertion sort, Selection sort, Count sort',
             'Rotation in Arrays',
-            'Interview problems on Arrays'
-          ]
+            'Interview problems on Arrays',
+          ],
         },
         {
           title: 'Number theory & Bitmasking',
@@ -85,8 +85,8 @@ export const webDevelopment = {
             'Bitwise operators',
             'Advantages & cost-effectiveness',
             'Backtracking with Bitmasking',
-            'Interview problems'
-          ]
+            'Interview problems',
+          ],
         },
         {
           title: 'Strings',
@@ -96,8 +96,8 @@ export const webDevelopment = {
             'Formatting and processing String',
             'Mutability and Behavior',
             'String operations',
-            'String Manipulation'
-          ]
+            'String Manipulation',
+          ],
         },
         {
           title: 'Space and Time complexity analysis',
@@ -110,8 +110,8 @@ export const webDevelopment = {
             'Theta, Big-O, Omega notations',
             'Understanding complexity of loops',
             'Auxiliary vs Total Space',
-            'Static & Dynamic Memory Allocation'
-          ]
+            'Static & Dynamic Memory Allocation',
+          ],
         },
         {
           title: 'Recursion & Backtracking',
@@ -122,8 +122,8 @@ export const webDevelopment = {
             'Understanding Recursive Tree',
             'Merge sort & Quick sort',
             'Interview problems on Recursion',
-            'Backtracking-Sudoku solver, N-Queens, lexo-permute'
-          ]
+            'Backtracking-Sudoku solver, N-Queens, lexo-permute',
+          ],
         },
         {
           title: 'Object Oriented Programming',
@@ -134,10 +134,10 @@ export const webDevelopment = {
             'this keyword',
             'Abstraction, Inheritance, Polymorphism, Encapsulation',
             'Static & non-static',
-            'Class Methods'
-          ]
-        }
-      ]
+            'Class Methods',
+          ],
+        },
+      ],
     },
     {
       title: 'Data Structure & Algorithms',
@@ -153,8 +153,8 @@ export const webDevelopment = {
             'Queue as generic collection',
             'Operations in Queue',
             'Queue using 2 stacks',
-            'Interview problems on Stack & Queue'
-          ]
+            'Interview problems on Stack & Queue',
+          ],
         },
         {
           title: 'LinkedList',
@@ -164,8 +164,8 @@ export const webDevelopment = {
             'Implementation of LinkedList',
             'Operations in LinkedList',
             'Cycle detection Algorithms',
-            'Problems based on LinkedList'
-          ]
+            'Problems based on LinkedList',
+          ],
         },
         {
           title: 'Binary Trees',
@@ -177,8 +177,8 @@ export const webDevelopment = {
             'Calculate- hieght, depth, diameter of tree',
             'Implementation of Binary Search Tree',
             'AVL Trees & Rotations',
-            'Interview problems on BT & BST'
-          ]
+            'Interview problems on BT & BST',
+          ],
         },
         {
           title: 'Heap & Dictionary',
@@ -188,8 +188,8 @@ export const webDevelopment = {
             'HeapSort with complexity analysis',
             'Concept of Hashing',
             'Dictionary implementation',
-            'Problems on Dictionary & Heaps'
-          ]
+            'Problems on Dictionary & Heaps',
+          ],
         },
         {
           title: 'Graph',
@@ -201,8 +201,8 @@ export const webDevelopment = {
             'AdjacencyMap implementation',
             'Searching Algorithms- DFS, BFS',
             'Connected component, Cycle detection',
-            "Kruskal's, Dijkstra's, Prim's Algorithms"
-          ]
+            "Kruskal's, Dijkstra's, Prim's Algorithms",
+          ],
         },
         {
           title: 'Dynamic Programming',
@@ -215,10 +215,10 @@ export const webDevelopment = {
             '0-1 KnapSack problem',
             'Wildcard pattern problem',
             'Egg drop problem',
-            'Matrix chain multiplication'
-          ]
-        }
-      ]
+            'Matrix chain multiplication',
+          ],
+        },
+      ],
     },
 
     {
@@ -233,8 +233,8 @@ export const webDevelopment = {
             'Functions, Conditions and looping',
             'Working with Arrays and Maps',
             'String processing and manipulation',
-            'Introduction to OOP in JS'
-          ]
+            'Introduction to OOP in JS',
+          ],
         },
         {
           title: 'Building application with npm',
@@ -244,8 +244,8 @@ export const webDevelopment = {
             'Understanding components of API call',
             'GitHub API calls with Axios',
             'Creating and deploying new npm module',
-            'Mini-project : file downloader'
-          ]
+            'Mini-project : file downloader',
+          ],
         },
         {
           title: 'Setting up pace with HTML and CSS ',
@@ -256,10 +256,10 @@ export const webDevelopment = {
             'Understanding a figma design',
             'Creating forms and validations',
             'Responsive website design Using bootstrap',
-            'FlexBoxes for best practices of alignments'
-          ]
-        }
-      ]
+            'FlexBoxes for best practices of alignments',
+          ],
+        },
+      ],
     },
     {
       title: 'Building Full Stack Capability',
@@ -272,8 +272,8 @@ export const webDevelopment = {
             'React concepts and building components',
             'ExpressJS Framework for creating RESTful APIs',
             'Various HTTP requests and Form Submissions',
-            'Socket.IO for realtime communication'
-          ]
+            'Socket.IO for realtime communication',
+          ],
         },
         {
           title: 'Diving Deep with React and Material UI',
@@ -283,8 +283,8 @@ export const webDevelopment = {
             'Using hooks for functional React experience',
             'Theme and Typography with React MUI',
             'Horizontal and Vertical Steppers with React MUI',
-            'Animations and Transitions with React Spring'
-          ]
+            'Animations and Transitions with React Spring',
+          ],
         },
         {
           title: 'Relational and Not Relational Databases',
@@ -293,8 +293,8 @@ export const webDevelopment = {
             'Walk trhough with SQL Queries',
             'H2 and MySQL Databases and connecting with ORM',
             'Handling documents with MongoDB',
-            'Setting up geolocation indexing for Uber like search'
-          ]
+            'Setting up geolocation indexing for Uber like search',
+          ],
         },
         {
           title: 'Cloud Authentication, Hosting and Functions',
@@ -303,8 +303,8 @@ export const webDevelopment = {
             'Setting up auth with passport',
             'Social auth with Google, Facebook and GitHub',
             'Cloud Functions for scaled Arch',
-            'Firestore and other firebase products'
-          ]
+            'Firestore and other firebase products',
+          ],
         },
         {
           title: 'Project discussion and best practices',
@@ -312,18 +312,19 @@ export const webDevelopment = {
           subtopics: [
             'Spinning up project ideas and how to explore',
             'Pitching session and walkthough presentation',
-            'Best Practices to follow for web projects'
-          ]
-        }
-      ]
-    }
+            'Best Practices to follow for web projects',
+          ],
+        },
+      ],
+    },
   ],
   slides: [
     {
       heading: '',
       subheading: '',
-      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fweb.png?alt=media&token=308d9e92-6ed1-4ba7-b970-07acce253a13'
-    }
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fweb.png?alt=media&token=308d9e92-6ed1-4ba7-b970-07acce253a13',
+    },
   ],
   tags: [
     'Bootstrap',
@@ -340,27 +341,27 @@ export const webDevelopment = {
     'Model Creation',
     'Authentication',
     'Cloud Functions',
-    'UI Interpretation'
+    'UI Interpretation',
   ],
   overview: [
     'Do you realize that the only functionality of a web application that the user directly interacts with is through the web page? Implement it poorly and, to the user, the server-side becomes irrelevant! Today’s user expects a lot out of the web page: it has to load fast, expose the desired service, and be comfortable to view on all devices: from a desktop computers to tablets and mobile phones.',
-    'In this course, we will learn the basic tools that every web page coder needs to know. We will start from the ground up by learning how to implement modern web pages with HTML and CSS. We will then advance to learning how to code our pages such that its components rearrange and resize themselves automatically based on the size of the user’s screen.'
+    'In this course, we will learn the basic tools that every web page coder needs to know. We will start from the ground up by learning how to implement modern web pages with HTML and CSS. We will then advance to learning how to code our pages such that its components rearrange and resize themselves automatically based on the size of the user’s screen.',
   ],
   faqs: [
     {
       title: 'Will this help me with my career path?',
       answer:
-        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.'
+        'Yes. If you learn well, all that the course intends to teach, you’ll be able to impress quite a few interviewers across quite a few fine companies.',
     },
     {
       title: 'How your doubts will get resolved?',
       answer:
-        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.'
+        'We have an army of TA’s who are available in different time slots to resolve all your doubts. You can also interact with faculty through Slack.',
     },
     {
       title: 'Is this course suitable for me?',
       answer:
-        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!'
-    }
-  ]
+        'Definitely! If you want to shift to software developer career path, then this course is perfect for you!',
+    },
+  ],
 };

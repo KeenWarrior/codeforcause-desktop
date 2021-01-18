@@ -5,37 +5,37 @@ import {
   Divider,
   makeStyles,
   Paper,
-  Typography
+  Typography,
 } from '@material-ui/core';
 import axios from 'axios';
 import React, { useReducer, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import ButtonComponent from 'src/components/Button/ButtonComponent';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '80%',
     margin: '0px auto 100px',
     [theme.breakpoints.down('sm')]: {
-      width: '100%'
-    }
+      width: '100%',
+    },
   },
   mainHeading: {
     fontWeight: 700,
-    color: '#000'
+    color: '#000',
   },
   container: {
-    padding: '10% 12%'
+    padding: '10% 12%',
   },
   subhead: {
-    padding: '40px 0 10px'
+    padding: '40px 0 10px',
   },
   textField: {
     marginBottom: '16px',
-    background: '#DEDEDE'
+    background: '#DEDEDE',
   },
   btn: {
-    padding: '13px'
+    padding: '13px',
   },
 
   unactbtn: {
@@ -44,8 +44,8 @@ const useStyles = makeStyles(theme => ({
     background: '#DEDEDE',
     '&:hover': {
       background: '#dedede',
-      color: 'black'
-    }
+      color: 'black',
+    },
   },
   actbtn: {
     margin: '5px 5px 5px 0px',
@@ -54,27 +54,27 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     '&:hover': {
       background: 'black',
-      color: 'white'
-    }
+      color: 'white',
+    },
   },
   submissions: {
     padding: '10px 0',
     width: '80px',
-    height: '50px'
+    height: '50px',
   },
   extraPadding: {
-    padding: '20px 0px'
+    padding: '20px 0px',
   },
   rightPadding: {
     [theme.breakpoints.up('md')]: {
-      paddingRight: '10px'
-    }
+      paddingRight: '10px',
+    },
   },
   leftPadding: {
     [theme.breakpoints.up('md')]: {
-      paddingLeft: '10px'
-    }
-  }
+      paddingLeft: '10px',
+    },
+  },
 }));
 
 function Form({ ...rest }) {
@@ -83,29 +83,28 @@ function Form({ ...rest }) {
   const [formData, updateFormData] = useState({});
   const [submitting, setSubmitting] = useState(0);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     updateFormData({
       ...formData,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     setSubmitting(1);
     console.log('d : ' + formData.date);
     e.preventDefault();
     axios({
       method: 'post',
-      url:
-        'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/profile', // cloud function url to be generated
-      data: formData
+      url: 'https://us-central1-codeforcauseorg.cloudfunctions.net/widgets/profile', // cloud function url to be generated
+      data: formData,
     })
-      .then(response => {
+      .then((response) => {
         setSubmitting(0);
         // handleClose();
         // enqueueSnackbar('Application Submitted Successfully');
       })
-      .catch(error => {
+      .catch((error) => {
         // enqueueSnackbar('Application Failed. Try again later');
       });
   };
@@ -113,31 +112,31 @@ function Form({ ...rest }) {
   const skillsArray = [
     {
       skill: 'c/c++',
-      activated: true
+      activated: true,
     },
     {
       skill: 'Machine Learning',
-      activated: false
+      activated: false,
     },
     {
       skill: 'Web Development',
-      activated: false
+      activated: false,
     },
     {
       skill: 'Augmented Reality',
-      activated: false
+      activated: false,
     },
 
     {
       skill: 'Game Development',
-      activated: false
-    }
+      activated: false,
+    },
   ];
   // to force update the state of the app
-  const [, forceUpdate] = useReducer(x => x + 1, 0);
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
   const [skills, updateSkills] = useState(skillsArray);
-  const handleSkillClick = eskill => {
+  const handleSkillClick = (eskill) => {
     for (var i = 0; i < skills.length; i++) {
       if (skills[i].skill === eskill) {
         skills[i].activated = !skills[i].activated;
@@ -157,10 +156,9 @@ function Form({ ...rest }) {
         <Typography
           className={classes.extraPadding}
           style={{ fontWeight: 600 }}
-          variant="subtitle2"
-        >
-          We will be able to recommend and will be able to notify you about our
-          events of your interest and near you.
+          variant="subtitle2">
+          We will be able to recommend and will be able to notify you about our events of your
+          interest and near you.
         </Typography>
         <Typography className={classes.subhead} variant="h6" color="primary">
           Personal Information
@@ -188,19 +186,10 @@ function Form({ ...rest }) {
             fullWidth
             name="phone"
             onChange={handleChange}
-            validators={[
-              'required',
-              'matchRegexp:^[+]*[(]*[+]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$'
-            ]}
-            errorMessages={[
-              'This is a required field',
-              'Please enter a valid contact number'
-            ]}
+            validators={['required', 'matchRegexp:^[+]*[(]*[+]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$']}
+            errorMessages={['This is a required field', 'Please enter a valid contact number']}
           />
-          <Divider
-            variant="fullWidth"
-            style={{ margin: '40px 0px 0px', padding: '0.5px' }}
-          />
+          <Divider variant="fullWidth" style={{ margin: '40px 0px 0px', padding: '0.5px' }} />
 
           <Typography className={classes.subhead} variant="h6" color="primary">
             Residential Information
@@ -243,10 +232,7 @@ function Form({ ...rest }) {
             errorMessages={['This is a required field']}
           />
 
-          <Divider
-            variant="fullWidth"
-            style={{ margin: '40px 0px 0px', padding: '0.5px' }}
-          />
+          <Divider variant="fullWidth" style={{ margin: '40px 0px 0px', padding: '0.5px' }} />
 
           <Typography className={classes.subhead} variant="h6" color="primary">
             Your Interests
@@ -263,8 +249,7 @@ function Form({ ...rest }) {
                     disableRipple={true}
                     onClick={() => {
                       handleSkillClick(skill);
-                    }}
-                  >
+                    }}>
                     {skill}
                   </Button>
                 );
@@ -276,8 +261,7 @@ function Form({ ...rest }) {
                     disableRipple={true}
                     onClick={() => {
                       handleSkillClick(skill);
-                    }}
-                  >
+                    }}>
                     {skill}
                   </Button>
                 );
@@ -285,8 +269,7 @@ function Form({ ...rest }) {
           </div>
           <div style={{ padding: '30px 0 15px' }}>
             <Typography style={{ margin: 0 }} variant="caption" color="initial">
-              By continuing, you agree to the Code For Cause Terms of Use and
-              Privacy Policy
+              By continuing, you agree to the Code For Cause Terms of Use and Privacy Policy
             </Typography>
           </div>
 

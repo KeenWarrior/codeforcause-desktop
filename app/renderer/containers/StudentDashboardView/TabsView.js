@@ -10,7 +10,7 @@ import CourseCard2 from '../../components/courseCards/CourseCardTemplate2';
 import EnrolledCourse from '../../components/courseCards/EnrolledCourse';
 import NotEnrolled from '../../components/courseCards/NotEnrolled';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     color: '#000',
@@ -18,26 +18,26 @@ const useStyles = makeStyles(theme => ({
     margin: '90px auto 20px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      margin: 0
-    }
+      margin: 0,
+    },
   },
 
   gridList: {
     flexWrap: 'nowrap',
     width: '100%',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    transform: 'translateZ(0)',
   },
   panel: {
-    margin: '40px 0 0'
+    margin: '40px 0 0',
   },
   tab: {
     background: '#F1F4FE',
     marginBottom: '40px',
     [theme.breakpoints.down('sm')]: {
-      marginBottom: '20px'
-    }
-  }
+      marginBottom: '20px',
+    },
+  },
 }));
 
 export default function MainTab() {
@@ -60,12 +60,11 @@ export default function MainTab() {
         value={value}
         onChange={handleChange}
         indicatorColor="secondary"
-        textColor="black"
+        textColor="secondary"
         className={classes.tab}
         centered
         scrollButtons="on"
-        variant="fullWidth"
-      >
+        variant="fullWidth">
         <Tab label="Your Courses " disableRipple={true} />
         <Tab label="Your Applications" disableRipple={true} />
         <Tab label="Other Programs" disableRipple={true} />
@@ -75,13 +74,12 @@ export default function MainTab() {
           className={classes.gridList}
           display="flex"
           alignItems="center"
-          cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
-        >
+          cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}>
           <GridListTile
+            key="0"
             style={{
-              height: '100%'
-            }}
-          >
+              height: '100%',
+            }}>
             <NotEnrolled />
           </GridListTile>
         </GridList>
@@ -91,21 +89,15 @@ export default function MainTab() {
           className={classes.gridList}
           display="flex"
           alignItems="center"
-          cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
-        >
+          cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}>
           {Object.entries(foundation).map(([cname, course], index) => {
             return (
               <GridListTile
                 key={course.id}
                 style={{
-                  height: '100%'
-                }}
-              >
-                {index === 0 ? (
-                  <EnrolledCourse course={course} />
-                ) : (
-                  <CourseCard2 course={course} />
-                )}
+                  height: '100%',
+                }}>
+                {index === 0 ? <EnrolledCourse course={course} /> : <CourseCard2 course={course} />}
               </GridListTile>
             );
           })}
@@ -116,16 +108,14 @@ export default function MainTab() {
           className={classes.gridList}
           display="flex"
           alignItems="center"
-          cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}
-        >
+          cols={large ? 3 : medium ? 2.5 : small ? 1.7 : 1.2}>
           {Object.entries(advanced).map(([cname, course], index) => {
             return (
               <GridListTile
                 key={course.id}
                 style={{
-                  height: '530px'
-                }}
-              >
+                  height: '530px',
+                }}>
                 <CourseCard1 course={course} />
               </GridListTile>
             );

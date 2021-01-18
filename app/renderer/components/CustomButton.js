@@ -3,18 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   btn: {
     backgroundColor: '#A60000',
     color: '#ffffff',
     textTransform: 'capitalize',
     [theme.breakpoints.down('sm')]: {
-      width: '100%'
+      width: '100%',
     },
     '&:hover': {
-      backgroundColor: 'rgba(166, 0, 0, 0.8)'
-    }
-  }
+      backgroundColor: 'rgba(166, 0, 0, 0.8)',
+    },
+  },
 }));
 
 function ButtonComponent({ className, title, icon, ...rest }) {
@@ -28,7 +28,7 @@ function ButtonComponent({ className, title, icon, ...rest }) {
 }
 
 ButtonComponent.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default ButtonComponent;

@@ -1,32 +1,25 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import {
-  Typography,
-  Box,
-  Card,
-  CardContent,
-  Grid,
-  LinearProgress
-} from '@material-ui/core';
+import { Typography, Box, Card, CardContent, Grid, LinearProgress } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
     borderRadius: '10px',
     margin: '12px',
-    boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.13)'
+    boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.13)',
   },
   cardContent: {
-    margin: '15px 5px'
+    margin: '15px 5px',
   },
   complete: {
-    fontWeight: '600'
-  }
+    fontWeight: '600',
+  },
 }));
 
 export default function EnrolledCourse({ course }) {
@@ -37,9 +30,8 @@ export default function EnrolledCourse({ course }) {
         className={classes.card}
         display="flex"
         style={{
-          maxWidth: '320px'
-        }}
-      >
+          maxWidth: '320px',
+        }}>
         <CardContent className={classes.cardContent}>
           <Box display="flex" flexDirection="column">
             <Typography
@@ -47,9 +39,8 @@ export default function EnrolledCourse({ course }) {
               variant="h5"
               style={{
                 color: '#0085FF',
-                paddingBottom: '11px'
-              }}
-            >
+                paddingBottom: '11px',
+              }}>
               {course.difficulty}
             </Typography>
             <Typography
@@ -57,9 +48,8 @@ export default function EnrolledCourse({ course }) {
               variant="h6"
               style={{
                 color: '#B20000',
-                marginBottom: '12px'
-              }}
-            >
+                marginBottom: '12px',
+              }}>
               {course.domain}
             </Typography>
 
@@ -72,12 +62,7 @@ export default function EnrolledCourse({ course }) {
         <Box>
           <Grid container md={12} justify="space-around" alignItems="center">
             <Grid item md={4}>
-              <Typography
-                fontWeight=""
-                noWrap
-                variant="caption"
-                style={{ fontWeight: 'bold' }}
-              >
+              <Typography fontWeight="" noWrap variant="caption" style={{ fontWeight: 'bold' }}>
                 Application Date
               </Typography>
             </Grid>
@@ -98,40 +83,27 @@ export default function EnrolledCourse({ course }) {
             md={12}
             justify="space-around"
             alignItems="center"
-            style={{ padding: '10px' }}
-          >
+            style={{ padding: '10px' }}>
             <Grid container md={3} sm={3} xs={3} row>
-              <ActiveLinearProgress
-                variant="determinate"
-                value="99"
-              ></ActiveLinearProgress>
+              <ActiveLinearProgress variant="determinate" value="99"></ActiveLinearProgress>
               <Typography className={classes.complete} variant="caption">
                 {'Application Filled'}
               </Typography>
             </Grid>
             <Grid container md={3} sm={3} xs={3} row>
-              <ActiveLinearProgress
-                variant="determinate"
-                value="99"
-              ></ActiveLinearProgress>
+              <ActiveLinearProgress variant="determinate" value="99"></ActiveLinearProgress>
               <Typography className={classes.complete} variant="caption">
                 {'Got Shortlisted'}
               </Typography>
             </Grid>
             <Grid container md={3} sm={3} xs={3} row>
-              <ActiveLinearProgress
-                variant="determinate"
-                value="99"
-              ></ActiveLinearProgress>
+              <ActiveLinearProgress variant="determinate" value="99"></ActiveLinearProgress>
               <Typography className={classes.complete} variant="caption">
                 {'Online Meeting'}
               </Typography>
             </Grid>
             <Grid container md={3} sm={3} xs={3} row>
-              <ActiveLinearProgress
-                variant="determinate"
-                value="99"
-              ></ActiveLinearProgress>
+              <ActiveLinearProgress variant="determinate" value="99"></ActiveLinearProgress>
               <Typography className={classes.complete} variant="caption">
                 {'Enroll In course'}
               </Typography>
@@ -151,18 +123,16 @@ export default function EnrolledCourse({ course }) {
             variant="caption"
             align="center"
             display="block"
-            style={{ fontWeight: 600, fontSize: '12px' }}
-          >
+            style={{ fontWeight: 600, fontSize: '12px' }}>
             Congrats!! You Can Enroll Now
           </Typography>
           <Typography
             variant="caption"
             align="center"
             display="block"
-            style={{ fontWeight: 500, fontSize: '10px', color: '#4CAC00' }}
-          >
-            You have successfully completed the application process. You can now
-            enroll into the course through the enroll now button given below.
+            style={{ fontWeight: 500, fontSize: '10px', color: '#4CAC00' }}>
+            You have successfully completed the application process. You can now enroll into the
+            course through the enroll now button given below.
           </Typography>
         </CardContent>
 
@@ -174,15 +144,13 @@ export default function EnrolledCourse({ course }) {
             background: '#A60000',
             color: '#FF4C00',
             textDecoration: 'none',
-            marginBottom: '16px'
-          }}
-        >
+            marginBottom: '16px',
+          }}>
           <Typography
             align="center"
             style={{
-              color: '#FFFFFF'
-            }}
-          >
+              color: '#FFFFFF',
+            }}>
             <Box m={1} fontWeight={600}>
               Enroll Now
             </Box>
@@ -192,29 +160,28 @@ export default function EnrolledCourse({ course }) {
           style={{
             fontSize: '0.56rem',
             padding: '0px 12px 10px',
-            color: '#787878'
+            color: '#787878',
           }}
-          variant="caption"
-        >
-          You will be able to enroll into the course as soon as you successfully
-          completed your online meeting.
+          variant="caption">
+          You will be able to enroll into the course as soon as you successfully completed your
+          online meeting.
         </Typography>
       </Card>
     </Box>
   );
 }
 
-const ActiveLinearProgress = withStyles(theme => ({
+const ActiveLinearProgress = withStyles((theme) => ({
   root: {
     width: '100%',
     marginTop: '10px',
-    marginBottom: '10px'
+    marginBottom: '10px',
   },
   colorPrimary: {
-    backgroundColor: '#FFF'
+    backgroundColor: '#FFF',
   },
   bar: {
     borderRadius: 5,
-    backgroundColor: '#4CAC00'
-  }
+    backgroundColor: '#4CAC00',
+  },
 }))(LinearProgress);
