@@ -35,7 +35,7 @@ export default function NotEnrolled() {
         }}
       >
         <CardContent className={clsx(classes.cardContent, classes.mainIcon)}>
-          <img src="/static/images/courses/error.svg" alt="error" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Ferror.svg?alt=media&token=36cbb60a-f1fd-450d-97c7-f5818017e4d1" alt="error" />
         </CardContent>
         <CardContent style={{ textAlign: 'center', padding: '0px 40px 36px' }}>
           <Typography

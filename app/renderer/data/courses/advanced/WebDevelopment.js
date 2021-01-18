@@ -146,7 +146,7 @@ export const webDevelopment = {
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/web.png'
+      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fweb.png?alt=media&token=308d9e92-6ed1-4ba7-b970-07acce253a13'
     }
   ],
   tags: [

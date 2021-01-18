@@ -145,7 +145,7 @@ export const devPython = {
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/apps.png'
+      image: 'apps.png'
     }
   ],
   tags: [

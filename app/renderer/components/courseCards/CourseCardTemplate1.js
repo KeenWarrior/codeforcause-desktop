@@ -4,6 +4,9 @@ import ParallaxSlide from '@mui-treasury/components/slide/parallax';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const FIREBASE_STORAGE_URL = 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2F'
+const FIREBASE_STORAGE_TRAIL = '?alt=media&token=80bcdf3d-a134-4d7b-90a4-486da7f9fad3';
+
 const useStyles = makeStyles(theme => ({
   icon: {
     marginRight: theme.spacing(2)
@@ -265,7 +268,8 @@ const ParallaxCarousel = ({ slides }) => {
               height: '160px',
               width: '100%',
               color: '#FFFFFF',
-              padding: '8px 0px'
+              padding: '8px 0px',
+              overflow: 'hidden'
             }}
           />
         </Box>

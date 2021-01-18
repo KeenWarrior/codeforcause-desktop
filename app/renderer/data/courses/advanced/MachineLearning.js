@@ -141,7 +141,7 @@ export const machineLearning = {
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/ml.png'
+      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fml.png?alt=media&token=80bcdf3d-a134-4d7b-90a4-486da7f9fad3'
     }
   ],
   tags: [

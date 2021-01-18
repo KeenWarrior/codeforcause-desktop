@@ -269,7 +269,7 @@ export const competitiveJava = {
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/comp.png'
+      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fcomp.png?alt=media&token=2d950d7c-a535-4cad-8ba8-d3b43c8136eb'
     }
   ],
   tags: [

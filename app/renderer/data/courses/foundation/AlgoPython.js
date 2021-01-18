@@ -223,7 +223,7 @@ export const algoPython = {
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/python.png'
+      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fpython.png?alt=media&token=ea536537-02b8-4a6d-ad82-11965ddcfb98'
     }
   ],
   tags: [

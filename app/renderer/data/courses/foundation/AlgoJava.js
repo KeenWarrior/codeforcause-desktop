@@ -229,7 +229,7 @@ export const algoJava = {
     {
       heading: '',
       subheading: '',
-      image: '/static/swipes/java.png'
+      image: 'https://firebasestorage.googleapis.com/v0/b/codeforcauseorg.appspot.com/o/course%2Fjava.png?alt=media&token=c8e4cd2e-30b7-4f83-add5-83d500529da4'
     }
   ],
   tags: [
