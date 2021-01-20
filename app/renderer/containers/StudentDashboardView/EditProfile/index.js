@@ -20,7 +20,7 @@ export default function EditProfile() {
   return (
     <Grid container xs={12}>
       <Grid item className={classes.back} xs={12} sm={2} md={2}>
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/profile" style={{ textDecoration: 'none' }}>
           <FontAwesomeIcon icon={faChevronLeft} color="#CC2700" />
           <Typography display="inline" variant="h6" color="secondary">
             {'  '} Back To Profile

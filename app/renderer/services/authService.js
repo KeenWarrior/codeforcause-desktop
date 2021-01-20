@@ -80,6 +80,20 @@ class AuthService {
       });
   }
 
+  handlePasswordReset(email) {
+    return new Promise((resolve, reject) => {
+      this.firebase
+        .auth()
+        .sendPasswordResetEmail(email)
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((e) => {
+          reject(e);
+        });
+    });
+  }
+
   logout = () => {
     this.firebase.auth().signOut();
     this.setSession(null);
