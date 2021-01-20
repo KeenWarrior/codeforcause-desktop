@@ -51,16 +51,16 @@ class AuthService {
   }
 
   handleEmailAndPasswordLogin(email, password) {
-    this.firebase
+    return new Promise((resolve, reject) => {
+      this.firebase
       .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .signInWithEmailAndPassword(email, password).then(result => {
+        resolve(result.user)
+        return;
+      }).catch(e => {
+        reject(e)
       })
-      .catch((e) => {
-        console.log(e);
-      });
+    })
   }
 
   handleEmailAndPasswordSignUp(email, password) {

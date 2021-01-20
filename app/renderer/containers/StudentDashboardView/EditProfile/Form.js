@@ -10,7 +10,7 @@ import {
 import axios from 'axios';
 import React, { useReducer, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import ButtonComponent from 'src/components/Button/ButtonComponent';
+import ButtonComponent from '../../../components/CustomButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
