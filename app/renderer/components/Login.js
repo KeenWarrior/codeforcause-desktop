@@ -155,7 +155,7 @@ function Login() {
           <Button type="submit" className={classes.btn} fullWidth>
             Login
           </Button>
-          <Button onClick={handleLogout}>Logout</Button>
+          {/* <Button onClick={handleLogout}>Logout</Button> */}
           <Link onClick={handleForgotPassword}>
             <Typography>Forgot Password</Typography>
           </Link>
