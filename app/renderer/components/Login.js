@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     background: 'linear-gradient(269.76deg, #180255 0.18%, #000000 53.35%, #000000 107.44%)',
     height: '100vh',
-    position: 'relative'
+    position: 'relative',
   },
   loginContainer: {
     backgroundColor: '#fff',
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     '-ms-transform': 'translate(-50%,-50%)',
     transform: 'translate(-50%,-50%)',
-    borderRadius: '3px'
+    borderRadius: '3px',
   },
   btn: {
     padding: '10px',
@@ -61,30 +61,31 @@ function Login() {
   const handleLogin = () => {
     dispatch(login());
     console.log(userField.email);
-    authService.handleEmailAndPasswordLogin(userField.email, userField.password).then(user => {
-      console.log(user)
-      enqueueSnackbar(`Logged in as ${user.displayName}`, {variant: 'success'});
-    }).catch(e => {
-      console.log(e)
-      enqueueSnackbar(`${e.message}`, {variant: 'error'})
-    })
+    authService
+      .handleEmailAndPasswordLogin(userField.email, userField.password)
+      .then((user) => {
+        console.log(user);
+        enqueueSnackbar(`Logged in as ${user.displayName}`, { variant: 'success' });
+      })
+      .catch((e) => {
+        console.log(e);
+        enqueueSnackbar(`${e.message}`, { variant: 'error' });
+      });
   };
 
   const handleLogout = () => {
     dispatch(logout());
     authService.logout();
-    enqueueSnackbar('Successfully Logged out!', {variant: 'success'});
+    enqueueSnackbar('Successfully Logged out!', { variant: 'success' });
   };
 
   return (
     <div className={classes.root}>
       <Container className={classes.loginContainer}>
-        <Typography style={{ fontSize: '34px', fontWeight: 700 }}>
-          Sign In
-      </Typography>
-      <Typography variant="h4" style={{fontWeight: 500, margin: '20px 0px 40px'}}>
-        Stand Up and fight for the Cause with the Code For Cause
-      </Typography>
+        <Typography style={{ fontSize: '34px', fontWeight: 700 }}>Sign In</Typography>
+        <Typography variant="h4" style={{ fontWeight: 500, margin: '20px 0px 40px' }}>
+          Stand Up and fight for the Cause with the Code For Cause
+        </Typography>
         <ValidatorForm onSubmit={handleLogin}>
           <TextValidator
             className={classes.textField}
@@ -110,8 +111,8 @@ function Login() {
           />
           <Button type="submit" className={classes.btn} fullWidth>
             Login
-        </Button>
-        <Button onClick={handleLogout}>Logout</Button>
+          </Button>
+          <Button onClick={handleLogout}>Logout</Button>
         </ValidatorForm>
       </Container>
     </div>

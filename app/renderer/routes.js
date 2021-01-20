@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router';
 
 import LoginPage from './containers/LoginPage';
 import ProfileView from './containers/StudentDashboardView';
-import EditProfileView from './containers/StudentDashboardView/EditProfile'
+import EditProfileView from './containers/StudentDashboardView/EditProfile';
 
 export default function Routes() {
   return (
