@@ -19,7 +19,7 @@ export default function VideoPage() {
         className={classes.drawer}
         variant="persistent"
         anchor="right"
-        open={true}
+        open={false}
         classes={{
           paper: classes.drawerPaper,
         }}>
