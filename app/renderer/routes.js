@@ -10,7 +10,7 @@ import Pl from './components/VideoPage/VideoPlayer';
 export default function Routes() {
   return (
     <Switch>
-      <Route exact path="/" component={Pl} />
+      <Route exact path="/" component={VideoPlayer} />
       <Route exact path="/" component={LoginPage} />
       <Route exact path="/profile" component={ProfileView} />
       <Route exact path="/editProfile" component={EditProfileView} />

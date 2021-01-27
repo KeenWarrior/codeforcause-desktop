@@ -3,27 +3,54 @@ import { Direction, FormattedTime, Slider } from 'react-player-controls';
 import { findDOMNode } from 'react-dom';
 import { Grid, IconButton, Slider as MuiSlider } from '@material-ui/core';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-// import { hot } from 'react-hot-loader'
 import screenfull from 'screenfull';
 
 import ReactPlayer from 'react-player';
 import { Fullscreen, Pause, Stop, VolumeOff, VolumeUp } from '@material-ui/icons';
 
-class App extends Component {
+class VideoPlayer extends Component {
   state = {
-    url: 'https://www.youtube.com/watch?v=9yMnfkkcb8s',
+    url: null,
     pip: false,
     playing: false,
     controls: false,
     light: false,
     volume: 0.8,
-    muted: false,
+    muted: true,
     played: 0,
     loaded: 0,
     duration: 0,
     playbackRate: 1.0,
     loop: false,
   };
+
+  _handleKeyDown = (event) => {
+    const SPACEBAR = 32;
+    const RIGHT = 39;
+    const LEFT = 37;
+    switch (event.keyCode) {
+      case SPACEBAR:
+        this.handlePlayPause();
+        break;
+      case RIGHT:
+        this.player.seekTo(this.state.played + 0.05);
+        break;
+      case LEFT:
+        this.handleLeftSeek();
+        break;
+    }
+  };
+
+  handleLeftSeek = () => {
+    if (this.state.played > 0.05) {
+      this.player.seekTo(this.state.played - 0.05);
+    }
+  };
+
+  componentDidMount() {
+    this.setState({ url: this.props.videoUrl });
+    document.addEventListener('keydown', this._handleKeyDown);
+  }
 
   pRate = [1, 1.5, 2];
   pIndex = 1;
@@ -73,7 +100,6 @@ class App extends Component {
   };
 
   handleSetPlaybackRate = (e) => {
-    console.log(this.state.playbackRate);
     this.pIndex += 1;
     this.setState({ playbackRate: parseFloat(e.target.value) });
   };
@@ -116,7 +142,7 @@ class App extends Component {
   };
 
   handleProgress = (state) => {
-    console.log('onProgress', state);
+    // console.log('onProgress', state);
     // We only want to update time slider if we are not currently seeking
     if (!this.state.seeking) {
       this.setState(state);
@@ -165,6 +191,8 @@ class App extends Component {
       playbackRate,
       pip,
     } = this.state;
+
+    url !== null && url !== this.props.videoUrl ? this.load(this.props.videoUrl) : '';
 
     return (
       <div className="app">
@@ -215,6 +243,7 @@ class App extends Component {
               backgroundColor: 'rgb(0, 0, 0, 0.4)',
               margin: 0,
               color: 'black',
+              zIndex: 10,
             }}>
             <Grid container item xs={2} sm={1}>
               <Grid item xs={6}>
@@ -266,9 +295,9 @@ class App extends Component {
                     cursor: 'pointer',
                   }}
                   onClick={this.handleSetPlaybackRate}
-                  value={this.pRate[this.pIndex % 3]}>{`${
-                  this.pRate[(this.pIndex - 1) % 3]
-                }x`}</button>
+                  value={this.pRate[this.pIndex % 3]}>
+                  {`${this.pRate[(this.pIndex - 1) % 3]}x`}
+                </button>
               </Grid>
               <Grid item xs={4}>
                 <IconButton onClick={this.handleClickFullscreen}>
@@ -283,7 +312,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default VideoPlayer;
 
 const TimeBar = ({ ...props }) => <MuiSlider style={{ color: '#fff' }} {...props} />;
 
