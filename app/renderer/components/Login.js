@@ -11,15 +11,14 @@ import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    textAlign: 'center',
-    background: 'linear-gradient(269.76deg, #180255 0.18%, #000000 53.35%, #000000 107.44%)',
+    background: '#fff',
     height: '100vh',
     position: 'relative',
   },
   loginContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: '#c4c4c4',
     padding: theme.spacing(5),
-    width: 'max-content',
+    width: '500px',
     position: 'absolute',
     left: '50%',
     top: '50%',
@@ -42,10 +41,23 @@ const useStyles = makeStyles((theme) => ({
   },
   textField: {
     marginBottom: '24px',
+    backgroundColor: '#ececec',
+    '& .MuiOutlinedInput-notchedOutline': {
+      borderColor: '#ececec',
+    },
   },
   submissions: {
     width: '80px',
     height: '50px',
+  },
+  forgotPass: {
+    fontWeight: 700,
+    fontSize: 14,
+    display: 'inline',
+  },
+  captions: {
+    display: 'block',
+    marginBottom: '8px',
   },
 }));
 
@@ -125,40 +137,57 @@ function Login() {
   return (
     <div className={classes.root}>
       <Container className={classes.loginContainer}>
-        <Typography style={{ fontSize: '34px', fontWeight: 700 }}>Sign In</Typography>
-        <Typography variant="h4" style={{ fontWeight: 500, margin: '20px 0px 40px' }}>
+        <Typography align="left" style={{ fontSize: '34px', fontWeight: 700 }}>
+          Sign In
+        </Typography>
+        <Typography variant="h6" style={{ fontWeight: 500, margin: '20px 0px 40px' }}>
           Stand Up and fight for the Cause with the Code For Cause
         </Typography>
         <ValidatorForm onSubmit={handleLogin}>
+          <Typography variant="caption" className={classes.captions}>
+            Your Registered Email Address
+          </Typography>
           <TextValidator
             className={classes.textField}
             required
             fullWidth
             variant="outlined"
-            label="Email Address"
             name="email"
             value={userField.email}
             onChange={handleChange}
           />
-
+          <Typography variant="caption" className={classes.captions}>
+            Password
+          </Typography>
           <TextValidator
             className={classes.textField}
             required
             fullWidth
             variant="outlined"
-            label="Password"
             name="password"
             type="password"
             value={userField.password}
             onChange={handleChange}
           />
           <Button type="submit" className={classes.btn} fullWidth>
-            Login
+            Sign In
           </Button>
+          <Typography variant="caption" style={{ color: '#6d6d6d', fontSize: 12 }}>
+            After continuing you agree to the Code For Cause Terms of Use and Privacy Policy
+          </Typography>
           {/* <Button onClick={handleLogout}>Logout</Button> */}
-          <Link onClick={handleForgotPassword}>
-            <Typography>Forgot Password</Typography>
-          </Link>
+          <div style={{ marginTop: '20px' }}>
+            <Typography className={classes.forgotPass}>Forgot Password?</Typography>
+            <Link
+              onClick={handleForgotPassword}
+              style={{ display: 'inline', textDecoration: 'none' }}>
+              <Typography color="secondary" className={classes.forgotPass}>
+                {' '}
+                Click Here
+              </Typography>
+            </Link>
+            <Typography className={classes.forgotPass}> for Help.</Typography>
+          </div>
         </ValidatorForm>
       </Container>
     </div>
