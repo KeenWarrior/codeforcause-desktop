@@ -8,8 +8,9 @@ import {
   Button,
   Icon,
 } from '@material-ui/core';
-import { ChevronLeft, PlayCircleFilled } from '@material-ui/icons';
+import { ChevronLeft, ExitToApp, PlayCircleFilled } from '@material-ui/icons';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import VideoPlayer from './VideoPlayer';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,12 +40,15 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     fontSize: '150px',
   },
+  drawer: {
+    display: 'flex',
+  },
 }));
 
 export default function VideoPage() {
   const classes = useStyles();
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [url, setUrl] = useState('https://www.youtube.com/watch?v=N9e_fFz12t4&t');
 
   const toggleDrawer = (status) => (event) => {
@@ -93,7 +97,11 @@ export default function VideoPage() {
         classes={{
           paper: classes.drawerPaper,
         }}>
-        <div role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+        <div
+          role="presentation"
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
+          style={{ flexGrow: 1 }}>
           <Divider />
           <List className={classes.list}>
             <ListItem>
@@ -124,6 +132,18 @@ export default function VideoPage() {
           </List>
           <Divider />
         </div>
+        <List>
+          <ListItem>
+            <Link to="/profile" style={{ textDecoration: 'none', color: 'black' }}>
+              <ExitToApp style={{ color: 'lightskyblue', marginRight: '12px' }} />
+            </Link>
+            <Link
+              to="/profile"
+              style={{ textDecoration: 'none', color: 'black', marginBottom: '5px' }}>
+              <Typography variant="caption">Go back To course page</Typography>
+            </Link>
+          </ListItem>
+        </List>
       </Drawer>
     </div>
   );

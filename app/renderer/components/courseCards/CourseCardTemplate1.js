@@ -209,7 +209,7 @@ export default function CourseCard({ course }) {
         <Link
           display="flex"
           justifyContent="center"
-          to={course.link}
+          to="/course"
           style={{
             background: '#A60000',
             color: '#FF4C00',

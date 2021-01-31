@@ -4,7 +4,7 @@ import { findDOMNode } from 'react-dom';
 import { Grid, IconButton, Slider as MuiSlider } from '@material-ui/core';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import screenfull from 'screenfull';
-
+// import { hot } from 'react-hot-loader';
 import ReactPlayer from 'react-player';
 import { Fullscreen, Pause, Stop, VolumeOff, VolumeUp } from '@material-ui/icons';
 
@@ -138,7 +138,11 @@ class VideoPlayer extends Component {
 
   handleSeekMouseUp = (val) => {
     this.setState({ seeking: false });
-    this.player.seekTo(parseFloat(val));
+    try {
+      this.player.seekTo(parseFloat(val));
+    } catch (e) {
+      console.log('Errors', e);
+    }
   };
 
   handleProgress = (state) => {

@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Box, Card, CardContent, Grid, LinearProgress } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/styles';
+import { shell } from 'electron';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -102,6 +103,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CourseCard({ course }) {
   const classes = useStyles();
+
+  const handleEnrollClick = () => {
+    shell.openExternal('https://codeforcause.org/courses');
+  };
+
   return (
     <Box>
       <Card
@@ -195,7 +201,7 @@ export default function CourseCard({ course }) {
         <Link
           display="flex"
           justifyContent="center"
-          to={course.link}
+          onClick={handleEnrollClick}
           style={{
             background: '#A60000',
             color: '#FF4C00',
