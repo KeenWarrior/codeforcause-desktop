@@ -11,6 +11,7 @@ import { Fullscreen, Pause, Stop, VolumeOff, VolumeUp } from '@material-ui/icons
 class VideoPlayer extends Component {
   state = {
     url: null,
+    videoIndex: 0,
     pip: false,
     playing: false,
     controls: false,
@@ -48,8 +49,21 @@ class VideoPlayer extends Component {
   };
 
   componentDidMount() {
-    this.setState({ url: this.props.videoUrl });
+    const vIndex = this.props.videoIndex;
+    this.setState({ url: this.props.videoList[vIndex].url, videoIndex: vIndex });
     document.addEventListener('keydown', this._handleKeyDown);
+  }
+
+  componentDidUpdate() {
+    const { url, videoIndex } = this.state;
+
+    if (videoIndex !== this.props.videoIndex) {
+      this.setState({ videoIndex: this.props.videoIndex });
+    }
+
+    if (url !== null && url !== this.props.videoList[videoIndex].url) {
+      this.load(this.props.videoList[videoIndex].url);
+    }
   }
 
   pRate = [1, 1.5, 2];
@@ -183,6 +197,7 @@ class VideoPlayer extends Component {
   render() {
     const {
       url,
+      videoIndex,
       playing,
       controls,
       light,
@@ -195,8 +210,6 @@ class VideoPlayer extends Component {
       playbackRate,
       pip,
     } = this.state;
-
-    url !== null && url !== this.props.videoUrl ? this.load(this.props.videoUrl) : '';
 
     return (
       <div className="app">

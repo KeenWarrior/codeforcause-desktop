@@ -49,7 +49,7 @@ export default function VideoPage() {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
-  const [url, setUrl] = useState('https://www.youtube.com/watch?v=N9e_fFz12t4&t');
+  const [vIndex, setVindex] = useState(2);
 
   const toggleDrawer = (status) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -84,7 +84,7 @@ export default function VideoPage() {
 
   return (
     <div>
-      <VideoPlayer videoUrl={url} />
+      <VideoPlayer videoList={videoList} videoIndex={vIndex} />
       <Button className={classes.btn} onClick={toggleDrawer(true)}>
         <ChevronLeft className={classes.icon} />
       </Button>
@@ -108,14 +108,15 @@ export default function VideoPage() {
               <Typography variant="h6">Classroom Lessons</Typography>
             </ListItem>
             <Divider />
-            {videoList.map(({ name, url }, index) => (
+            {videoList.map(({ name }, index) => (
               <ListItem
                 button
                 key={index}
                 onClick={() => {
-                  setUrl(url);
+                  setVindex(index);
                 }}
-                className={classes.listItem}>
+                className={classes.listItem}
+                style={index === vIndex ? { backgroundColor: 'pink' } : {}}>
                 <PlayCircleFilled style={{ color: 'lightskyblue', marginRight: '12px' }} />
                 <Typography variant="caption">{name}</Typography>
               </ListItem>
